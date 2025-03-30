@@ -1,0 +1,48 @@
+.navBar {
+    background-color: black;
+    height: 64px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    justify-content: center;
+    z-index: 99;
+}
+
+.navBar > div {
+    width: 1300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBar ul {
+    display: flex;
+}
+
+.navBar ul li a {
+    padding: 6px 8px;
+    text-transform: uppercase;
+    display: flex;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.navBar ul li a:hover {
+    background-color: grey;
+}
+
+.navBar ul li a img {
+    margin-right: 6px;
+}
+
+.navBar ul li a p {
+    line-height: 17px;
+    margin-top: 3px;
+    font-weight: bold;
+}
+
+.navBar h1 {
+    font-size: 20em;
+}

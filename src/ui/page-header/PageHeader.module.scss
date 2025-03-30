@@ -1,0 +1,121 @@
+.pageHeader {
+    background-color: grey;
+    height: 900px;
+    position: relative;
+    overflow: hidden;
+
+    .jobRoles li {
+        display: inline-flex;
+        margin-right: 10px;
+    }
+}
+
+.backgroundAnim {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #0d006a 0%, #000 77%) no-repeat;
+    background-size: cover;
+}
+
+.mountainRange {
+    display: block;
+    height: auto;
+    width: 70%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.launchPad {
+    display: block;
+    height: auto;
+    width: 300px;
+    position: absolute;
+    bottom: -10;
+    left: 70%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.cloudsBg {
+    background-image: url('/CloudsTop.svg');
+    background-repeat: repeat-x;
+    background-size: auto; // or contain / custom
+    width: 100%;
+    height: 20em;
+    margin-top: 80px;
+}
+
+.testClass {
+    width: 90%;
+    position: absolute;
+    bottom: 15px;
+}
+
+.cloudsBg2 {
+    background-image: url('/CloudsBottomBackground.svg');
+    background-repeat: repeat-x;
+    background-size: auto; // or contain / custom
+    height: 3em;
+    margin-top: 80px;
+    width: 90%;
+}
+.cloudsBg3 {
+    background-image: url('/CloudsBottomForground.svg');
+    background-repeat: repeat-x;
+    background-size: auto; // or contain / custom
+    height: 20em;
+    margin-top: 0px;
+    z-index: 20;
+    position: relative;
+    margin-left: 8%;
+}
+
+
+.cloudsTop {
+    position: absolute;
+    width: 200%; // twice the screen width
+    height: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    animation: scrollClouds 70s linear infinite;
+}
+
+.cloudsBottom {
+    position: absolute;
+    width: 200%; // twice the screen width
+    height: 100%;
+    display: flex;
+    top: 540;
+    left: 0;
+    animation: scrollClouds 200s linear infinite;
+}
+
+.cloudContainers {
+    padding: 0 65px;
+    width: 100vw;
+}
+
+.cloudContainers2 {
+    padding: 0;
+    width: 100vw;
+    z-index: 20;
+    position: relative;
+}
+
+@keyframes scrollClouds {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.mountainRangeIMG {
+    z-index: -1;
+}

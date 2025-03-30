@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Angular.JS",
+    "description": "A Javascript framework",
+    "icon": "/angular.svg"
+  },
+  {
+    "name": "AWS Lambda ",
+    "description": "A Javascript framework",
+    "icon": "/awslambda.svg"
+  },
+  {
+    "name": "AWS API Gateway ",
+    "description": "A Javascript framework",
+    "icon": "/amazonapigateway.svg"
+  },
+  {
+    "name": "Amazon S3 ",
+    "description": "A Javascript framework",
+    "icon": "/amazons3.svg"
+  },
+  {
+    "name": "AWS SQS ",
+    "description": "A Javascript framework",
+    "icon": "/amazonsqs.svg"
+  },
+  {
+    "name": "CSS",
+    "description": "A Javascript framework",
+    "icon": "/css.svg"
+  },
+  {
+    "name": "Electron",
+    "description": "A Javascript framework",
+    "icon": "/electron.svg"
+  },
+  {
+    "name": "HTML5",
+    "description": "",
+    "icon": "/html5.svg"
+  },
+  {
+    "name": "JavaScript",
+    "description": "A Javascript framework",
+    "icon": "/javascript.svg"
+  },
+  {
+    "name": "MongoDB",
+    "description": "A Javascript framework",
+    "icon": "/mongodb.svg"
+  },
+  {
+    "name": "MySQL",
+    "description": "A Javascript framework",
+    "icon": "/mysql.svg"
+  },
+  {
+    "name": "Next.js",
+    "description": "A Javascript framework",
+    "icon": "/nextdotjs.svg"
+  },
+  {
+    "name": "Node.js",
+    "description": "A Javascript framework",
+    "icon": "/nodedotjs.svg"
+  },
+  {
+    "name": "PostgreSQL",
+    "description": "A Javascript framework",
+    "icon": "/postgresql.svg"
+  },
+  {
+    "name": "Python",
+    "description": "A Javascript framework",
+    "icon": "/python.svg"
+  },
+  {
+    "name": "React.js",
+    "description": "A Javascript framework",
+    "icon": "/react.svg"
+  },
+  {
+    "name": "Sass",
+    "description": "A Javascript framework",
+    "icon": "/sass.svg"
+  },
+  {
+    "name": "Selenium ",
+    "description": "A Javascript framework",
+    "icon": "/selenium.svg"
+  },
+  {
+    "name": "TypeScript",
+    "description": "A Javascript framework",
+    "icon": "/typescript.svg"
+  },
+  {
+    "name": "Vue.js",
+    "description": "A Javascript framework",
+    "icon": "/vuedotjs.svg"
+  }
+]

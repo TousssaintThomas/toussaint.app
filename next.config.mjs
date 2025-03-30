@@ -1,4 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import withSvgr from 'next-plugin-svgr';
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	images: {
+		domains: ['cdn.simpleicons.org'],
+	},
+};
+
+export default withSvgr(nextConfig);
