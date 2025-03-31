@@ -1,6 +1,8 @@
+$focus-width: 1200px;
+
 .pageHeader {
     background-color: grey;
-    height: 900px;
+    height: 100vh;
     position: relative;
     overflow: hidden;
 
@@ -20,8 +22,8 @@
 
 .mountainRange {
     display: block;
-    height: auto;
-    width: 70%;
+    height: 100%;
+    width: 200%;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -29,24 +31,13 @@
     z-index: 1;
 }
 
-.launchPad {
-    display: block;
-    height: auto;
-    width: 300px;
-    position: absolute;
-    bottom: -10;
-    left: 70%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-.cloudsBg {
-    background-image: url('/CloudsTop.svg');
-    background-repeat: repeat-x;
-    background-size: auto; // or contain / custom
+.mountainRangeImg {
     width: 100%;
-    height: 20em;
-    margin-top: 80px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    // z-index: 1;
 }
 
 .testClass {
@@ -55,49 +46,8 @@
     bottom: 15px;
 }
 
-.cloudsBg2 {
-    background-image: url('/CloudsBottomBackground.svg');
-    background-repeat: repeat-x;
-    background-size: auto; // or contain / custom
-    height: 3em;
-    margin-top: 80px;
-    width: 90%;
-}
-.cloudsBg3 {
-    background-image: url('/CloudsBottomForground.svg');
-    background-repeat: repeat-x;
-    background-size: auto; // or contain / custom
-    height: 20em;
-    margin-top: 0px;
-    z-index: 20;
-    position: relative;
-    margin-left: 8%;
-}
-
-
-.cloudsTop {
-    position: absolute;
-    width: 200%; // twice the screen width
-    height: 100%;
-    display: flex;
-    top: 0;
-    left: 0;
-    animation: scrollClouds 70s linear infinite;
-}
-
-.cloudsBottom {
-    position: absolute;
-    width: 200%; // twice the screen width
-    height: 100%;
-    display: flex;
-    top: 540;
-    left: 0;
-    animation: scrollClouds 200s linear infinite;
-}
-
 .cloudContainers {
-    padding: 0 65px;
-    width: 100vw;
+    width: 50%;
 }
 
 .cloudContainers2 {
@@ -107,15 +57,157 @@
     position: relative;
 }
 
+/*.cloudsTop {
+    position: absolute;
+    width: 200vw;
+    height: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    animation: scrollClouds 70s linear infinite;
+}*/
+
+.backgroundAnim {
+    --distance-multiplyer: 3;
+}
+
+.cloudsTop {
+    position: absolute;
+    width: calc(200vw * var(--distance-multiplyer));
+    height: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    animation: scrollClouds 70s linear infinite;
+}
+
+.cloudsBg {
+    background-image: url('/CloudsTopFramed.svg');
+    background-repeat: repeat-x;
+    background-size: auto;
+    width: 50%;
+    height: 20em;
+    margin-top: 80px;
+}
+
+.cloudsBottom {
+    position: absolute;
+    width: calc(200vw * var(--distance-multiplyer));
+    // width: 50vw;
+    height: auto;
+    display: flex;
+    bottom: 8.5em;
+    left: 0;
+    animation: scrollClouds 200s linear infinite;
+    z-index: 0;
+}
+
+.cloudsBottom > div {
+    width: 50%;
+    // height: 100%;
+    position: relative;
+}
+
+.cloudsBg2 {
+    background-image: url('/CloudsBottomBackground.svg');
+    background-repeat: repeat-x;
+    background-size: auto;
+    width: 100%;
+    height: 3em;
+    position: absolute;
+    z-index: 0;
+}
+
+.cloudsBg3 {
+    background-image: url('/CloudsBottomForground.svg');
+    background-repeat: repeat-x;
+    background-size: auto;
+    width: 100%;
+    height: 3em;
+    z-index: 2;
+}
+
 @keyframes scrollClouds {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(calc(-100vw * var(--distance-multiplyer)));
     }
 }
 
 .mountainRangeIMG {
     z-index: -1;
+}
+
+.shuttleElevator {
+    width: 117px;
+    position: absolute;
+    bottom: 2px;
+    right: 0px;
+}
+
+.heroText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.heroText > div {
+    max-width: $focus-width;
+    width: 90%;
+}
+
+.heroText > div > div {
+    max-width: 650px;
+    margin-bottom: 15em;
+}
+
+.heroTextDevName {
+    font-size: 2rem;
+}
+
+.devTitle {
+    font-size: 2.25rem;
+}
+
+.heroSubText {
+    font-size: 1rem;
+}
+
+.launchPadContainer {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.launchPadContainer > div {
+    max-width: $focus-width;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end
+}
+
+.launchPad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 300px;
+    position: absolute;
+    bottom: -10px;
+    z-index: 1;
 }

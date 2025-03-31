@@ -4,9 +4,11 @@ import WorkExp from '@/ui/work-exp/WorkExp';
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="w-full min-h-screen">
         <PageHeader></PageHeader>
-        <WorkExp></WorkExp>
+        <main>
+            <WorkExp></WorkExp>
+        </main>
     </div>
   );
 }

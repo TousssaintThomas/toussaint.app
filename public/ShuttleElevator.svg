@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117 317.12">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #c1272d;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: red;
+      }
+
+      .cls-3 {
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_12" data-name="Layer 12">
+    <g>
+      <g>
+        <line class="cls-3" x1="70" y1="118.5" x2="70" y2="157.5"/>
+        <line class="cls-3" x1="109" y1="118.5" x2="109" y2="157.5"/>
+        <line class="cls-3" x1="109" y1="157.5" x2="109" y2="196.5"/>
+        <line class="cls-3" x1="70" y1="157.5" x2="70" y2="196.5"/>
+        <polyline class="cls-3" points="109 196.5 109 235.5 109 274.5"/>
+        <polyline class="cls-3" points="70 196.5 70 235.5 70 274.5"/>
+        <g>
+          <polyline class="cls-3" points="70 157.5 109 118.5 70 118.5 109 157.5"/>
+          <polyline class="cls-3" points="109 196.5 70 157.5 109 157.5 70 196.5"/>
+          <polyline class="cls-3" points="70 235.5 109 196.5 70 196.5 109 235.5"/>
+          <polyline class="cls-3" points="70 274.5 109 235.5 70 235.5 109 274.5"/>
+          <polyline class="cls-3" points="70 274.5 70 313.5 109 274.5 70 274.5 109 313.5 109 274.5"/>
+        </g>
+      </g>
+      <g>
+        <polyline class="cls-3" points="109 1.5 109 40.5 109 79.5"/>
+        <polyline class="cls-3" points="70 1.5 70 40.5 70 79.5"/>
+        <g>
+          <polyline class="cls-3" points="70 40.5 109 1.5 70 1.5 109 40.5"/>
+          <polyline class="cls-3" points="70 79.5 109 40.5 70 40.5 109 79.5"/>
+          <polyline class="cls-3" points="70 79.5 70 118.5 109 79.5 70 79.5 109 118.5 109 79.5"/>
+        </g>
+      </g>
+      <rect class="cls-3" x="1.5" y="20.14" width="69" height="18.73"/>
+      <polyline class="cls-1" points="1.5 20.14 18.13 38.86 32.06 21 44.84 38.86 55.68 21 70.5 38.86"/>
+      <polyline class="cls-1" points="1.5 38.86 17.94 20.14 32.26 38.86 44.06 20.14 56.26 38.86 70.5 20.14"/>
+      <path class="cls-2" d="M64.71,304.5h48.58c1.5,0,2.71,1.21,2.71,2.71v2.29h-54v-2.29c0-1.5,1.21-2.71,2.71-2.71Z"/>
+    </g>
+  </g>
+</svg>
