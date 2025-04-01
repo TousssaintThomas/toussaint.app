@@ -1,50 +1,59 @@
+"use client";
+
 import Image from "next/image";
-import styles from './navBar.module.css'
+import { useState } from "react";
+import styles from './navBar.module.scss'
 
 export default function NavBar() {
+
+	const [menuOpen, setMenuOpen] = useState(false)
+
+	const navItems = [
+		{ name: 'Home', icon: 'Icon' },
+		{ name: 'Resume', icon: 'Icon' },
+		{ name: 'Contact', icon: 'Icon'}
+	]
+
+	const offSiteLinks = [
+		{ name: 'Github', icon: 'Icon' },
+		{ name: 'LinkedIn', icon: 'Icon' }
+	]
+
+	const navList = navItems.map(item => {
+		return (
+			<li key={item.name}>
+				<a onClick={() => setMenuOpen(false)}>
+					<p>{item.name}</p>
+				</a>
+			</li>
+		)
+	})
+
+	const offsiteList = offSiteLinks.map(item => {
+		return (
+			<li key={item.name}>
+				<a>
+					<p>{item.name}</p>
+				</a>
+			</li>
+		)
+	})
+
 	return (
-		<nav className={styles.navBar}>
+		<nav className={`${styles.navBar} ${menuOpen ? styles.menuOpen : ''}`}>
+			<div>
+				<button
+					onClick={() => setMenuOpen(!menuOpen)}
+				>
+					Menu
+				</button>
+			</div>
 			<div>
 				<ul>
-					<li>
-						<a>
-							<p>Home</p>
-						</a>
-					</li>
-					<li>
-						<a>
-							<p>Resume</p>
-						</a>
-					</li>
-					<li>
-						<a>
-							<p>Contact</p>
-						</a>
-					</li>
+					{navList}
 				</ul>
 				<ul>
-					<li>
-						<a>
-							<Image
-								src={'/github.svg'}
-								alt={'n/a'}
-								width={20}
-								height={20}
-							/>
-							<p>Github</p>
-						</a>
-					</li>
-					<li>
-						<a>
-							<Image
-								src={'/linkedin.svg'}
-								alt={'n/a'}
-								width={20}
-								height={20}
-							/>
-							<p>LinkedIn</p>
-						</a>
-					</li>
+					{offsiteList}
 				</ul>
 			</div>
 		</nav>
