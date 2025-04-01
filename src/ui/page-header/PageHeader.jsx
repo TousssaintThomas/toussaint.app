@@ -62,9 +62,12 @@ export default function PageHeader() {
 			<div className={`${styles.heroText}`}>
 				<div>
 					<div>
+						<p>Hello, my name is</p>
 						<h1 className={`${styles.heroTextDevName}`}>Toussaint Thomas</h1>
 						<h1 className={`${styles.devTitle}`}>Interstellar Developer</h1>
 						<p className={`${styles.heroSubText}`}>No page builders or WordPress. We offer 100% hand-coded websites with superior results starting at $175/mo as well as Google Ads and SEO services.</p>
+						<div className={`${styles.headerDivider}`}></div>
+						<button className={`${styles.outlinedButton}`}>Learn More</button>
 					</div>
 				</div>
 			</div>

@@ -101,3 +101,31 @@
 .navBar h1 {
     font-size: 20em;
 }
+
+.iconToggle {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.iconToggle svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.2s ease;
+}
+
+.iconToggle .hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.iconToggle .visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.navIcon {
+    margin-top: -2px;
+    margin-right: 0.75rem;
+}

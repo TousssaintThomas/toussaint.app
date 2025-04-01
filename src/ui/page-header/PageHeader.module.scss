@@ -166,7 +166,7 @@ $focus-width: 1200px;
 
 .heroText > div > div {
     max-width: 650px;
-    margin-bottom: 15em;
+    margin-bottom: 5em;
 }
 
 .heroTextDevName {
@@ -211,3 +211,30 @@ $focus-width: 1200px;
     bottom: -10px;
     z-index: 1;
 }
+
+.headerDivider {
+    height: 10px;
+    width: 100px;
+    background-color: white;
+    margin: 18px 0 24px 0;
+}
+
+.outlinedButton {
+    color: white;
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 6px;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: white;
+    }
+}
+
