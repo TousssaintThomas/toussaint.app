@@ -1,5 +1,6 @@
 import styles from './PageHeader.module.scss'
 import Image from "next/image";
+import HeaderText from './HeaderText.json'
 
 export default function PageHeader() {
 	return (
@@ -8,6 +9,18 @@ export default function PageHeader() {
 				<div className={`${styles.cloudsTop}`}>
 					<div className={`${styles.cloudsBg}`}></div>
 					<div className={`${styles.cloudsBg}`}></div>
+				</div>
+				<div className={`${styles.moonIMG}`}>
+					<div>
+						<Image
+							src="/CresantMoon.svg"
+							alt="Moon"
+							width={70}
+							height={70}
+							unoptimized
+
+						/>
+					</div>
 				</div>
 				<div className={`${styles.cloudsBottom}`}>
 					<div>
@@ -63,9 +76,9 @@ export default function PageHeader() {
 				<div>
 					<div>
 						<p>Hello, my name is</p>
-						<h1 className={`${styles.heroTextDevName}`}>Toussaint Thomas</h1>
-						<h1 className={`${styles.devTitle}`}>Interstellar Developer</h1>
-						<p className={`${styles.heroSubText}`}>No page builders or WordPress. We offer 100% hand-coded websites with superior results starting at $175/mo as well as Google Ads and SEO services.</p>
+						<h1 className={`${styles.heroTextDevName}`}>{HeaderText.name}</h1>
+						<h1 className={`${styles.devTitle}`}>{HeaderText.title}</h1>
+						<p className={`${styles.heroSubText}`}>{HeaderText.subText}</p>
 						<div className={`${styles.headerDivider}`}></div>
 						<button className={`${styles.outlinedButton}`}>Learn More</button>
 					</div>
