@@ -45,6 +45,12 @@ $focus-width: 386px;
     width: 90%;
     position: absolute;
     bottom: 5px;
+    transition: transform 1s ease-out;
+    transform: translateY(0);
+}
+
+.launched {
+    transform: translateY(-120px); // adjust this to control how far it "takes off"
 }
 
 .cloudContainers {
