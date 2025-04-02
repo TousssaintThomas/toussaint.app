@@ -42,7 +42,7 @@ export default function PageHeader() {
 						className={styles.mountainRangeImg}
 					/>
 				</div>
-				{/*<div className={`${styles.launchPadContainer}`}>
+				<div className={`${styles.launchPadContainer}`}>
 					<div>
 						<div className={`${styles.launchPad}`}>
 							<Image
@@ -70,7 +70,7 @@ export default function PageHeader() {
 							/>
 						</div>
 					</div>
-				</div>*/}
+				</div>
 			</div>
 			<div className={`${styles.heroText}`}>
 				<div>
