@@ -51,6 +51,7 @@ export default function PageHeader() {
 								width={2000}
 								height={300}
 								unoptimized={true}
+								className={`${styles.shuttleLaunchPad}`}
 							/>
 							<Image
 								src={'/SpaceShuttle.svg'}
@@ -58,7 +59,7 @@ export default function PageHeader() {
 								width={2000}
 								height={300}
 								unoptimized={true}
-								className={`${styles.testClass}`}
+								className={`${styles.spaceShuttle}`}
 							/>
 							<Image
 								src={'/ShuttleElevator.svg'}
