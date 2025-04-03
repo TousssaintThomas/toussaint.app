@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 import Image from 'next/image'
-import styles from './WorkExp.module.css'
+import styles from './WorkExp.module.scss'
 import WorkExpData from './WorkExpData.json'
 import Skills from './Skills.json'
 import AnimatedAvatar from '@/ui/animated-avatar/AnimatedAvatar'
@@ -27,7 +27,16 @@ export default function WorkExp() {
                 key={role.id}
                 className={'flex flex-col md:flex-row gap-4 mb-8'}
             >
-                <div className={'pr-5'}>
+                <div className="w-full flex flex-col items-center text-center">
+                    <h1
+                        className={`${styles.sectionHeader} text-xl md:text-left`}
+                    >
+                        Experience
+                    </h1>
+                    <div className={`${styles.sectionDivider} mt-2`}></div>
+                </div>
+
+                <div className={'flex justify-center items-cente'}>
                     <AnimatedAvatar></AnimatedAvatar>
                 </div>
                 <div
@@ -38,14 +47,25 @@ export default function WorkExp() {
 					border-b-1
 					border-b-indigo-500"
                 >
-                    <p className={'flex-1/2 text-base/7'}>
-                        {role.company}, {role.location}
-                    </p>
-                    <p className={'flex-1/2 text-right text-xs'}>
-                        {role.dateStarted} - {role.dateEnded}
-                    </p>
-                    <p className={'flex-1/2'}>{role.role}</p>
-                    <div className={'flex-12/12 text-base/7 role-description'}>
+                    <div
+                        className="
+					    flex
+					    flex-wrap
+					    px-6"
+                    >
+                        <p className={'flex-1/2 text-base/7'}>
+                            {role.company}, {role.location}
+                        </p>
+                        <p className={'flex-1/2 text-right text-xs'}>
+                            {role.dateStarted} - {role.dateEnded}
+                        </p>
+                        <p className={'flex-1/2'}>{role.role}</p>
+                    </div>
+                    <div
+                        className={
+                            'flex-12/12 text-base/7 role-description pl-2'
+                        }
+                    >
                         <ReactMarkdown>{role.description}</ReactMarkdown>
                     </div>
                     <p className={'pb-2 text-sm'}>Applied Skills:</p>
@@ -56,7 +76,7 @@ export default function WorkExp() {
     })
 
     return (
-        <section className={'grid place-items-center pt-40'}>
+        <section className={'grid place-items-center pt-10'}>
             <div className={styles.roleList}>{roleList}</div>
         </section>
     )

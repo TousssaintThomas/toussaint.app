@@ -1,8 +1,0 @@
-.roleList div div ul:first-child {
-    list-style-type: disc;
-    padding: 1em 2em;
-}
-
-.roleList {
-    width: 1000px;
-}

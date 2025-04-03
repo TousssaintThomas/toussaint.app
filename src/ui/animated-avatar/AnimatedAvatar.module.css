@@ -1,7 +1,7 @@
 .animatedAvatar {
     color: blue;
     background-color: white;
-    width: 200px;
+    min-width: 200px;
     height: 200px;
     border-radius: 50%;
 }
