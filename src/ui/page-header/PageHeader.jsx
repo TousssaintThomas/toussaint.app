@@ -23,7 +23,7 @@ export default function PageHeader() {
     }, [])
 
     return (
-        <header className={`${styles.pageHeader} flex`}>
+        <header className={`${styles.pageHeader} flex mb-8`}>
             <div className={`${styles.backgroundAnim}`}>
                 <div className={`${styles.cloudsTop}`}>
                     <div className={`${styles.cloudsBg}`}></div>

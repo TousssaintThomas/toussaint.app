@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function RoleSummary() {
     return (
         <section
-            className={`${styles.summarySection} flex flex-col md:flex-row gap-6`}
+            className={`${styles.summarySection} flex flex-col md:flex-row gap-6 mb-6`}
         >
             <div className={`${styles.codeAnim} flex-1`}>
                 <Image

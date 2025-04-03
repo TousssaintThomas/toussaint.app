@@ -25,27 +25,16 @@ export default function WorkExp() {
         return (
             <div
                 key={role.id}
-                className={'flex flex-col md:flex-row gap-4 mb-8'}
+                className={'flex flex-col md:flex-row gap-4 mb-4'}
             >
-                <div className="w-full flex flex-col items-center text-center">
-                    <h1
-                        className={`${styles.sectionHeader} text-xl md:text-left`}
-                    >
-                        Experience
-                    </h1>
-                    <div className={`${styles.sectionDivider} mt-2`}></div>
-                </div>
-
-                <div className={'flex justify-center items-cente'}>
+                <div className={'flex justify-center items-center mb-6'}>
                     <AnimatedAvatar></AnimatedAvatar>
                 </div>
                 <div
                     className="
 					flex
 					flex-wrap
-					mb-16 pb-8
-					border-b-1
-					border-b-indigo-500"
+					mb-6 pb-8"
                 >
                     <div
                         className="
@@ -68,8 +57,10 @@ export default function WorkExp() {
                     >
                         <ReactMarkdown>{role.description}</ReactMarkdown>
                     </div>
-                    <p className={'pb-2 text-sm'}>Applied Skills:</p>
-                    <ul className={'flex-12/12'}>{skillList}</ul>
+                    <div className={`flex flex-col px-6`}>
+                        <p className={'pb-2 text-sm'}>Applied Skills:</p>
+                        <ul className={'flex-12/12'}>{skillList}</ul>
+                    </div>
                 </div>
             </div>
         )
@@ -77,6 +68,12 @@ export default function WorkExp() {
 
     return (
         <section className={'grid place-items-center pt-10'}>
+            <div className="w-full flex flex-col items-center text-center">
+                <h1 className={`${styles.sectionHeader} text-xl md:text-left`}>
+                    Experience
+                </h1>
+                <div className={`${styles.sectionDivider} mt-2 mb-16`}></div>
+            </div>
             <div className={styles.roleList}>{roleList}</div>
         </section>
     )
