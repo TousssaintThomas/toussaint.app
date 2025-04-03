@@ -71,14 +71,32 @@ export default function PageHeader() {
                                 unoptimized={true}
                                 className={`${styles.shuttleLaunchPad}`}
                             />
-                            <Image
-                                src={'/SpaceShuttle.svg'}
-                                alt={'n/a'}
-                                width={2000}
-                                height={300}
-                                unoptimized={true}
+                            <div
                                 className={`${styles.spaceShuttle} ${launched ? styles.launched : ''}`}
-                            />
+                            >
+                                <Image
+                                    src={'/SpaceShuttle.svg'}
+                                    alt={'n/a'}
+                                    width={2000}
+                                    height={300}
+                                    unoptimized={true}
+                                />
+                                <div
+                                    className={`${styles.flameContainer} ${launched ? styles.showFlames : ''}`}
+                                >
+                                    {Array.from({ length: 5 }).map((_, i) => (
+                                        <Image
+                                            key={i}
+                                            src="/RocketFlame.svg"
+                                            alt="Rocket Flame"
+                                            width={100}
+                                            height={100}
+                                            unoptimized
+                                            className={styles.rocketFlame}
+                                        />
+                                    ))}
+                                </div>
+                            </div>
                             <Image
                                 src={'/ShuttleElevator.svg'}
                                 alt={'n/a'}
