@@ -27,7 +27,7 @@ export default function RoleSummary() {
                     />
                 </div>
             </div>
-            <div className={`flex-1 px-4 md:px-6 lg:px-8`}>
+            <div className={`flex-1 px-6 md:px-6 lg:px-8`}>
                 <h1>Digital Nature is a Premium Web Development Company</h1>
                 <p className={`text-justify`}>
                     We are a small team of passionate developers who specialize
