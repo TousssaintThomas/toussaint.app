@@ -7,7 +7,7 @@ $focus-width: 386px;
 
 @media (max-width: 1280px) { // xl
     .heroText > div {
-        --focus-width: 1000px;
+        --focus-width: 800px;
     }
 }
 
@@ -79,14 +79,48 @@ $focus-width: 386px;
 }
 
 .mountainRange {
+    --mnt-width: 100%;
+}
+
+.mountainRange {
     display: block;
     height: 100%;
-    width: 200%;
+    width: var(--mnt-width);
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+}
+
+@media (max-width: 1280px) { // xl
+    .mountainRange {
+        --mnt-width: 100%;
+    }
+}
+
+@media (max-width: 1024px) { // lg
+    .mountainRange {
+        --mnt-width: 200%;
+    }
+}
+
+@media (max-width: 768px) { // md
+    .mountainRange {
+        --mnt-width: 200%;
+    }
+}
+
+@media (max-width: 640px) { // sm
+    .mountainRange {
+        --mnt-width: 200%;
+    }
+}
+
+@media (max-width: 480px) {
+    .mountainRange {
+        --mnt-width: 200%;
+    }
 }
 
 .mountainRangeImg {
@@ -266,12 +300,46 @@ $focus-width: 386px;
 }
 
 .launchPadContainer > div {
-    max-width: $focus-width;
+    --focus-width: 800px;
+}
+
+.launchPadContainer > div {
+    max-width: var(--focus-width);
     position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: flex-end
+}
+
+@media (max-width: 1280px) { // xl
+    .launchPadContainer > div {
+        --focus-width: 800px;
+    }
+}
+
+@media (max-width: 1024px) { // lg
+    .launchPadContainer > div {
+        --focus-width: 650px;
+    }
+}
+
+@media (max-width: 768px) { // md
+    .launchPadContainer > div {
+        --focus-width: 500px;
+    }
+}
+
+@media (max-width: 640px) { // sm
+    .launchPadContainer > div {
+        --focus-width: 386px;
+    }
+}
+
+@media (max-width: 480px) {
+    .launchPadContainer > div {
+        --focus-width: 386px;
+    }
 }
 
 .launchPad {
