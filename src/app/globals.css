@@ -3,6 +3,7 @@
 :root {
   --background: black;
   --foreground: white;
+  --distance-multiplyer: 3;
 }
 
 @theme inline {
@@ -16,6 +17,12 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+@media (min-width: 480px) {
+  .backgroundAnim {
+    --distance-multiplyer: 0.5;
   }
 }
 
