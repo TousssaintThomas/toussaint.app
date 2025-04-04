@@ -1,12 +1,24 @@
+'use client'
+
 import styles from '@/ui/role-summary/RoleSummary.module.scss'
 import Image from 'next/image'
+import { motion } from 'motion/react'
+import AnimatedChips from '@/ui/role-summary/AnimatedChips'
 
 export default function RoleSummary() {
+    const box = {
+        width: 100,
+        height: 100,
+        backgroundColor: '#ff0088',
+        borderRadius: 5
+    }
+
     return (
         <section
+            id={'summary'}
             className={`${styles.summarySection} flex flex-col md:flex-row gap-6 mb-6`}
         >
-            <div className={`${styles.codeAnim} flex-1`}>
+            <div className={`${styles.codeAnim} flex-1 relative`}>
                 <Image
                     src={'/MockIDE.svg'}
                     alt={'n/a'}
@@ -26,6 +38,7 @@ export default function RoleSummary() {
                         className={styles.laneMask}
                     />
                 </div>
+                <AnimatedChips></AnimatedChips>
             </div>
             <div className={`flex-1 px-6 md:px-6 lg:px-8`}>
                 <h1>Digital Nature is a Premium Web Development Company</h1>

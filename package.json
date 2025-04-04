@@ -14,6 +14,7 @@
     "@heroicons/react": "^2.2.0",
     "@mui/icons-material": "^7.0.1",
     "@mui/material": "^7.0.1",
+    "motion": "^12.6.3",
     "next": "15.2.2",
     "next-plugin-svgr": "^1.1.12",
     "react": "^19.0.0",

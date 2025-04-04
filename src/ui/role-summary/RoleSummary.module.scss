@@ -62,3 +62,34 @@
     margin-bottom: 0.75em;
   }
 }
+
+.fanOutContainer {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.chip {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: #f9a8d4; // pink-300
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chipIcon {
+  width: 24px;
+  height: 24px;
+  color: white;
+
+}
+
