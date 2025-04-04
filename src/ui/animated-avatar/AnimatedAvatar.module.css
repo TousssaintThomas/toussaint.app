@@ -4,4 +4,7 @@
     min-width: 200px;
     height: 200px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #ffdce2;
 }

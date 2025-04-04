@@ -7,7 +7,8 @@
     "dateStarted": "December 2023",
     "dateEnded": "April 2025",
     "description": "\n- Designed, developed, and deployed scalable web applications using AWS services, with a strong focus on AWS Lambda, **API Gateway**, **DynamoDB**, and **S3**.\n- Built and maintained RESTful APIs, ensuring high availability, security, and efficiency\n- Implemented serverless solutions to optimize performance and reduce infrastructure costs\n- Led the development of microservices architecture, improving system modularity and maintainability.\n- Utilized React.js and Vue.js for front-end development, ensuring seamless user experience.\n- Integrated CI/CD pipelines using GitHub Actions and AWS CodePipeline to automate deployments",
-    "skills": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+    "skills": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+    "avatarID": "/IdCard.svg"
   },
   {
     "id": 2,
@@ -17,7 +18,8 @@
     "dateStarted": "December 2023",
     "dateEnded": "April 2025",
     "description": "\n- Led the development of desktop applications for Voalte's medical communication platform.\n- Developed and maintained web applications using React.js, Vue.js, and Angular.js.\n\n- Engineered automation scripts to streamline application provisioning and deployment.\n- Collaborated closely with cross-functional teams to ensure optimal software performance and reliability.\n",
-    "skills": [0,5,6,7,8,9,10,12,14,15,16]
+    "skills": [0,5,6,7,8,9,10,12,14,15,16],
+    "avatarID": "/IdCard.svg"
   },
   {
     "id": 3,
@@ -27,7 +29,8 @@
     "dateStarted": "December 2023",
     "dateEnded": "April 2025",
     "description": "\n- Led the development of desktop applications for Voalte's medical communication platform.\n- Developed and maintained web applications using React.js, Vue.js, and Angular.js.\n\n- Engineered automation scripts to streamline application provisioning and deployment.\n- Collaborated closely with cross-functional teams to ensure optimal software performance and reliability.\n",
-    "skills": [0,5,6,7,8,9,10,12,14,15,16]
+    "skills": [0,5,6,7,8,9,10,12,14,15,16],
+    "avatarID": "/IdCard.svg"
   },
   {
     "id": 4,
@@ -37,7 +40,8 @@
     "dateStarted": "December 2023",
     "dateEnded": "April 2025",
     "description": "\n- Led the development of desktop applications for Voalte's medical communication platform.\n- Developed front-end components using HTML5, CSS3, and JavaScript.\n\n- Provided internal technical support, troubleshooting software and hardware issues. \n- Administered Office 365, managing user accounts and permissions.\n",
-    "skills": [5,7,8,10]
+    "skills": [5,7,8,10],
+    "avatarID": "/IdCard.svg"
   },
   {
     "id": 5,
@@ -47,6 +51,7 @@
     "dateStarted": "November 2014",
     "dateEnded": "November 2015",
     "description": "\n-  Provided technical consulting for small businesses, optimizing IT infrastructure.\n- Provided technical support for Microsoft CRM and Office 365 environments.\n",
-    "skills": [5,7]
+    "skills": [5,7],
+    "avatarID": "/IdCard.svg"
   }
 ]

@@ -28,7 +28,7 @@ export default function WorkExp() {
                 className={'flex flex-col md:flex-row gap-4 mb-4'}
             >
                 <div className={'flex justify-center items-center mb-6'}>
-                    <AnimatedAvatar></AnimatedAvatar>
+                    <AnimatedAvatar src={role.avatarID} />
                 </div>
                 <div
                     className="

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 305 464">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 9px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        font-family: ROGFonts-Regular, 'ROG Fonts';
+      }
+
+      .cls-5 {
+        letter-spacing: .01em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-7 {
+        letter-spacing: .02em;
+      }
+
+      .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-10 {
+        letter-spacing: .02em;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+
+      .cls-12 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        font-size: 12px;
+      }
+
+      .cls-3 {
+        font-size: 20px;
+      }
+
+      .cls-13 {
+        fill: #999;
+      }
+
+      .cls-14 {
+        stroke-width: 3px;
+      }
+
+      .cls-14, .cls-15 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-14, .cls-15, .cls-16 {
+        fill: #ccc;
+      }
+
+      .cls-15 {
+        stroke-width: 2px;
+      }
+
+      .cls-17 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        font-size: 27px;
+      }
+
+      .cls-18 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-19 {
+        fill: #ff0;
+      }
+
+      .cls-20 {
+        fill: #e6e6e6;
+      }
+    </style>
+  </defs>
+  <g id="Layer_3" data-name="Layer 3">
+    <rect class="cls-8" width="296" height="464" rx="17.45" ry="17.45"/>
+    <path class="cls-19" d="M278.55,0H17.45C7.81,0,0,7.81,0,17.45v57.55h296V17.45c0-9.64-7.81-17.45-17.45-17.45Z"/>
+    <rect class="cls-19" y="294" width="296" height="49"/>
+  </g>
+  <g id="Layer_6" data-name="Layer 6">
+    <rect x="19" y="303" width="2" height="31"/>
+    <rect x="23" y="303" width="4" height="31"/>
+    <rect x="33" y="303" width="4" height="31"/>
+    <rect x="55" y="303" width="4" height="31"/>
+    <rect x="65" y="303" width="2" height="31"/>
+    <rect x="87" y="303" width="2" height="31"/>
+    <rect x="96" y="303" width="2" height="31"/>
+    <rect x="109" y="303" width="2" height="31"/>
+    <rect x="118" y="303" width="2" height="31"/>
+    <rect x="132" y="303" width="2" height="31"/>
+    <rect x="152" y="303" width="2" height="31"/>
+    <rect x="137" y="303" width="2" height="31"/>
+    <rect x="113" y="303" width="3" height="31"/>
+    <rect x="91" y="303" width="3" height="31"/>
+    <rect x="61" y="303" width="2" height="31"/>
+    <rect x="47" y="303" width="2" height="31"/>
+    <rect x="51" y="303" width="2" height="31"/>
+    <rect x="42" y="303" width="2" height="31"/>
+    <rect x="29" y="303" width="2" height="31"/>
+    <rect x="69" y="303" width="3" height="31"/>
+    <rect x="76" y="303" width="6" height="31"/>
+    <rect x="99" y="303" width="6" height="31"/>
+    <rect x="122" y="303" width="6" height="31"/>
+    <rect x="143" y="303" width="6" height="31"/>
+  </g>
+  <g id="Layer_7" data-name="Layer 7">
+    <text class="cls-4" transform="translate(69.37 44.4)"><tspan x="0" y="0">COMPANY </tspan></text>
+    <text class="cls-2" transform="translate(164.46 135.9)"><tspan x="0" y="0">N</tspan><tspan class="cls-5" x="10.34" y="0">Am</tspan><tspan x="32.38" y="0">e </tspan><tspan class="cls-11" x="46.13" y="0">he</tspan><tspan x="66.85" y="0">re </tspan></text>
+    <text class="cls-1" transform="translate(164.46 150.8)"><tspan x="0" y="0">Position</tspan></text>
+    <text class="cls-1" transform="translate(164.46 180.8)"><tspan x="0" y="0">joi</tspan><tspan class="cls-12" x="16.7" y="0">n</tspan><tspan x="24.55" y="0">ed</tspan></text>
+    <text class="cls-1" transform="translate(164.46 197.8)"><tspan class="cls-12" x="0" y="0">m</tspan><tspan x="8.57" y="0">m-dd-</tspan><tspan class="cls-7" x="44.31" y="0">yyy</tspan><tspan x="68.24" y="0">y</tspan></text>
+    <text class="cls-1" transform="translate(164.46 222.8)"><tspan x="0" y="0">em</tspan><tspan class="cls-12" x="16.09" y="0">p</tspan><tspan class="cls-18" x="23.88" y="0">l</tspan><tspan x="30.37" y="0">oyee id:</tspan></text>
+    <text class="cls-1" transform="translate(164.46 237.8)"><tspan x="0" y="0">00-000-00-00</tspan></text>
+    <text class="cls-3" transform="translate(47.88 394.37)"><tspan class="cls-17" x="0" y="0">l</tspan><tspan class="cls-10" x="14.42" y="0">o</tspan><tspan x="32.3" y="0">go</tspan></text>
+    <text class="cls-2" transform="translate(33.88 414.77)"><tspan class="cls-6" x="0" y="0">l</tspan><tspan x="8.65" y="0">orem ip</tspan><tspan class="cls-9" x="69.31" y="0">su</tspan><tspan x="90.6" y="0">m</tspan></text>
+    <rect class="cls-16" x="195" y="368" width="51" height="51" rx="5.01" ry="5.01"/>
+    <rect class="cls-15" x="226" y="399" width="12" height="12"/>
+    <rect class="cls-14" x="203" y="375" width="16" height="16"/>
+  </g>
+  <g id="Layer_9" data-name="Layer 9">
+    <rect class="cls-20" x="19" y="111" width="123" height="148"/>
+  </g>
+  <g id="Layer_10" data-name="Layer 10">
+    <rect class="cls-13" x="59" y="149" width="38" height="54" rx="19" ry="19"/>
+    <rect class="cls-13" x="68" y="189" width="20" height="28"/>
+    <path class="cls-13" d="M57.07,214h41.86c5.56,0,10.07,4.51,10.07,10.07v21.93h-62v-21.93c0-5.56,4.51-10.07,10.07-10.07Z"/>
+    <rect x="152" y="371" width="5" height="58"/>
+  </g>
+  <g id="Layer_4" data-name="Layer 4">
+    <rect class="cls-16" y="75" width="296" height="19"/>
+  </g>
+</svg>
