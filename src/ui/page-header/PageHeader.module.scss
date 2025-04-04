@@ -76,6 +76,30 @@ $focus-width: 386px;
 
 .backgroundAnim {
     --distance-multiplyer: 3;
+
+    @media (max-width: 1536px) { // 2xl
+        --distance-multiplyer: 1.5;
+    }
+
+    @media (max-width: 1280px) { // xl
+        --distance-multiplyer: 1.8;
+    }
+
+    @media (max-width: 1024px) { // lg
+        --distance-multiplyer: 2;
+    }
+
+    @media (max-width: 768px) { // md
+        --distance-multiplyer: 2.2;
+    }
+
+    @media (max-width: 640px) { // sm
+        --distance-multiplyer: 2.5;
+    }
+
+    @media (max-width: 480px) { // custom xs
+        --distance-multiplyer: 2.8;
+    }
 }
 
 .cloudsTop {
