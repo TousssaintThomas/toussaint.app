@@ -1,37 +1,39 @@
 /*$focus-width: 1200px;*/
 $focus-width: 386px;
 
-.heroText > div {
+header.pageHeader {
     --focus-width: 1000px;
-}
+    --mnt-width: 100%;
+    --distance-multiplyer: 1;
 
-@media (max-width: 1280px) { // xl
-    .heroText > div {
+    @media (max-width: 1280px) {
         --focus-width: 800px;
+        --mnt-width: 100%;
+        --distance-multiplyer: 1.5;
     }
-}
 
-@media (max-width: 1024px) { // lg
-    .heroText > div {
+    @media (max-width: 1024px) {
         --focus-width: 650px;
+        --mnt-width: 200%;
+        --distance-multiplyer: 2.2;
     }
-}
 
-@media (max-width: 768px) { // md
-    .heroText > div {
+    @media (max-width: 768px) {
         --focus-width: 500px;
+        --mnt-width: 200%;
+        --distance-multiplyer: 2.5;
     }
-}
 
-@media (max-width: 640px) { // sm
-    .heroText > div {
+    @media (max-width: 640px) {
         --focus-width: 386px;
+        --mnt-width: 200%;
+        --distance-multiplyer: 2.8;
     }
-}
 
-@media (max-width: 480px) {
-    .heroText > div {
+    @media (max-width: 480px) {
         --focus-width: 386px;
+        --mnt-width: 200%;
+        --distance-multiplyer: 3;
     }
 }
 
@@ -79,10 +81,6 @@ $focus-width: 386px;
 }
 
 .mountainRange {
-    --mnt-width: 100%;
-}
-
-.mountainRange {
     display: block;
     height: 100%;
     width: var(--mnt-width);
@@ -91,36 +89,6 @@ $focus-width: 386px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-}
-
-@media (max-width: 1280px) { // xl
-    .mountainRange {
-        --mnt-width: 100%;
-    }
-}
-
-@media (max-width: 1024px) { // lg
-    .mountainRange {
-        --mnt-width: 200%;
-    }
-}
-
-@media (max-width: 768px) { // md
-    .mountainRange {
-        --mnt-width: 200%;
-    }
-}
-
-@media (max-width: 640px) { // sm
-    .mountainRange {
-        --mnt-width: 200%;
-    }
-}
-
-@media (max-width: 480px) {
-    .mountainRange {
-        --mnt-width: 200%;
-    }
 }
 
 .mountainRangeImg {
@@ -164,40 +132,6 @@ $focus-width: 386px;
     left: 0;
     animation: scrollClouds 70s linear infinite;
 }*/
-
-.backgroundAnim {
-    --distance-multiplyer: 1;
-}
-
-@media (max-width: 1280px) { // xl
-    .backgroundAnim {
-        --distance-multiplyer: 1.5;
-    }
-}
-
-@media (max-width: 1024px) { // lg
-    .backgroundAnim {
-        --distance-multiplyer: 2.2;
-    }
-}
-
-@media (max-width: 768px) { // md
-    .backgroundAnim {
-        --distance-multiplyer: 2.5;
-    }
-}
-
-@media (max-width: 640px) { // sm
-    .backgroundAnim {
-        --distance-multiplyer: 2.8;
-    }
-}
-
-@media (max-width: 480px) {
-    .backgroundAnim {
-        --distance-multiplyer: 3;
-    }
-}
 
 .cloudsTop {
     position: absolute;
