@@ -16,7 +16,13 @@ export default function RoleSummary() {
     return (
         <section
             id={'summary'}
-            className={`${styles.summarySection} flex flex-col md:flex-row gap-6 mb-6`}
+            className={`
+                ${styles.summarySection} 
+                flex 
+                flex-col 
+                md:flex-row 
+                py-16
+            `}
         >
             <div className={`${styles.codeAnim} flex-1 relative`}>
                 <Image
@@ -41,8 +47,8 @@ export default function RoleSummary() {
                 <AnimatedChips></AnimatedChips>
             </div>
             <div className={`flex-1 px-6 md:px-6 lg:px-8`}>
-                <h1>Digital Nature is a Premium Web Development Company</h1>
-                <p className={`text-justify`}>
+                <h1 className={`${styles.summarySectionHeader}`}>Digital Nature is a Premium Web Development Company</h1>
+                <p className={`${styles.summarySectionTxt} text-justify`}>
                     We are a small team of passionate developers who specialize
                     in modern JavaScript websites with a focus on performance
                     and security. We leverage popular development frameworks to

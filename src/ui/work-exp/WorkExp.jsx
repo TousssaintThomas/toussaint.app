@@ -52,7 +52,7 @@ export default function WorkExp() {
                     </div>
                     <div
                         className={
-                            'flex-12/12 text-base/7 role-description pl-2'
+                            'flex-12/12 text-base/7 role-description text-justify'
                         }
                     >
                         <ReactMarkdown>{role.description}</ReactMarkdown>
@@ -67,7 +67,7 @@ export default function WorkExp() {
     })
 
     return (
-        <section id={'resume'} className={'grid place-items-center pt-10'}>
+        <section id={'resume'} className={'grid place-items-center pt-10 px-6'}>
             <div className="w-full flex flex-col items-center text-center">
                 <h1 className={`${styles.sectionHeader} text-xl md:text-left`}>
                     Experience
