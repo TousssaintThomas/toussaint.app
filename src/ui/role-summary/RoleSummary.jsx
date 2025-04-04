@@ -22,6 +22,7 @@ export default function RoleSummary() {
                 flex-col 
                 md:flex-row 
                 py-16
+                md:justify-center
             `}
         >
             <div className={`${styles.codeAnim} flex-1 relative`}>
@@ -46,17 +47,20 @@ export default function RoleSummary() {
                 </div>
                 <AnimatedChips></AnimatedChips>
             </div>
-            <div className={`flex-1 px-6 md:px-6 lg:px-8`}>
-                <h1 className={`${styles.summarySectionHeader}`}>Digital Nature is a Premium Web Development Company</h1>
-                <p className={`${styles.summarySectionTxt} text-justify`}>
-                    We are a small team of passionate developers who specialize
-                    in modern JavaScript websites with a focus on performance
-                    and security. We leverage popular development frameworks to
-                    create both static websites as well as dynamic database
-                    driven web applications. With over 10 years of experience we
-                    work with clients all over the world and in all major
-                    industries.
-                </p>
+            <div className={`flex-1 px-6 md:px-6 lg:px-8 flex items-center`}>
+                <div className="w-full">
+                    <h1 className={`mb-4`}>About Me</h1>
+                    <p className={`${styles.summarySectionTxt} text-justify`}>
+                        I'm a full-stack developer with over a decade of
+                        experience building fast, secure, and scalable web
+                        applications. My expertise lies in JavaScript and
+                        Node.js, with deep knowledge of modern front-end
+                        frameworks like React, Vue, and Svelte. Whether it’s a
+                        dynamic web app or a high-performance static site, I
+                        focus on clean, maintainable code and thoughtful user
+                        experiences from front to back.
+                    </p>
+                </div>
             </div>
         </section>
     )

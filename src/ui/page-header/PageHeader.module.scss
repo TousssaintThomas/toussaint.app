@@ -181,7 +181,6 @@ header.pageHeader {
     position: absolute;
     bottom: 0;
     left: 0;
-    // z-index: 1;
 }
 
 .cloudContainers {
@@ -227,7 +226,6 @@ header.pageHeader {
 .cloudsBottom {
     position: absolute;
     width: calc(200vw * var(--distance-multiplyer));
-    // width: 50vw;
     height: auto;
     display: flex;
     bottom: 8.5em;
@@ -238,7 +236,6 @@ header.pageHeader {
 
 .cloudsBottom > div {
     width: 50%;
-    // height: 100%;
     position: relative;
 }
 
@@ -365,7 +362,7 @@ header.pageHeader {
 }
 
 .launched {
-    transform: translateY(var(--shuttle-launchDistance)); // adjust this to control how far it "takes off"
+    transform: translateY(var(--shuttle-launchDistance));
 }
 
 .shuttleLaunchPad {
@@ -377,7 +374,7 @@ header.pageHeader {
     height: 10px;
     width: 100px;
     background-color: white;
-    margin: 18px 0 24px 0;
+    margin: 18px 0 40px 0;
 }
 
 .outlinedButton {
@@ -428,7 +425,7 @@ header.pageHeader {
     position: relative;
     margin: 0 auto;
     opacity: 0;
-    pointer-events: none; // optional: prevent interaction
+    pointer-events: none;
     transition: opacity 0.4s ease;
 
     &.showFlames {
@@ -440,11 +437,6 @@ header.pageHeader {
             width: var(--shuttle-launchFlames);
             height: var(--shuttle-launchFlames);
         }
-    }
-
-    .rocketFlame {
-        width: 30px;
-        height: 35px;
     }
 
     .rocketFlame:nth-child(1) {

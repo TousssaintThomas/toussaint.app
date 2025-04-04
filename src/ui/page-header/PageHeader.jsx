@@ -123,9 +123,9 @@ export default function PageHeader() {
                             {HeaderText.subText}
                         </p>
                         <div className={`${styles.headerDivider}`}></div>
-                        <button className={`${styles.outlinedButton}`}>
+                        <a href="#summary" className={styles.outlinedButton}>
                             Learn More
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

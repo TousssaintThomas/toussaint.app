@@ -1,6 +1,6 @@
 .summarySection {
-  --sectionHeaderSize:2.6rem;
-  --summarySectionTxtSize: 1.6rem;
+  --sectionHeaderSize:2.45rem;
+  --summarySectionTxtSize: 1.1rem;
 
   @media (max-width: 1280px) {
     --sectionHeaderSize: 2rem;
@@ -100,7 +100,7 @@
 .summarySection {
   h1 {
     font-size: var(--sectionHeaderSize);
-    margin-bottom: 0.75em;
+    margin-bottom: 0.2em;
   }
 }
 

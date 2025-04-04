@@ -23,8 +23,16 @@ export default function NavBar() {
     ]
 
     const offSiteLinks = [
-        { name: 'Github', icon: GitHubIcon },
-        { name: 'LinkedIn', icon: LinkedInIcon }
+        {
+            name: 'Github',
+            icon: GitHubIcon,
+            href: 'https://github.com/TousssaintThomas'
+        },
+        {
+            name: 'LinkedIn',
+            icon: LinkedInIcon,
+            href: 'https://www.linkedin.com/in/toussaint-thomas-aa725196/'
+        }
     ]
 
     const navList = navItems.map((item) => {
@@ -45,7 +53,7 @@ export default function NavBar() {
 
         return (
             <li key={item.name}>
-                <a>
+                <a href={item.href}>
                     <Icon className={styles.navIcon} />
                     <p>{item.name}</p>
                 </a>
