@@ -15,6 +15,7 @@ header.pageHeader {
     --shuttle-launchFlamesSpread: 265px;
     --shuttle-launchFlames: 75px;
     --shuttle-elevator: 156px;
+    --shuttle-elevatorBot: -10px;
     --shuttle-launchDistance: -400px;
 
     @media (max-width: 1280px) {
@@ -26,10 +27,11 @@ header.pageHeader {
         --hero-devTitleLineHeight: 5rem;
         --hero-subtitle: 1.4rem;
 
-        --shuttle-launch: 200px;
+        --shuttle-launch: 300px;
         --shuttle-launchFlamesSpread: 127px;
         --shuttle-launchFlames: 50px;
-        --shuttle-elevator: 156px;
+        --shuttle-elevator: 117px;
+        --shuttle-elevatorBot: -10px;
         --shuttle-launchDistance: -120px;
     }
 
@@ -45,7 +47,8 @@ header.pageHeader {
         --shuttle-launch: 200px;
         --shuttle-launchFlamesSpread: 127px;
         --shuttle-launchFlames: 50px;
-        --shuttle-elevator: 156px;
+        --shuttle-elevator: 77px;
+        --shuttle-elevatorBot: -5px;
         --shuttle-launchDistance: -120px;
     }
 
@@ -55,13 +58,15 @@ header.pageHeader {
         --distance-multiplyer: 2.5;
 
         --hero-title: 2.5rem;
-        --hero-devTitleLineHeight: 5rem;
+        --hero-devTitle: 3.25rem;
+        --hero-devTitleLineHeight: 4rem;
         --hero-subtitle: 1.2rem;
 
         --shuttle-launch: 200px;
         --shuttle-launchFlamesSpread: 127px;
         --shuttle-launchFlames: 50px;
         --shuttle-elevator: 77px;
+        --shuttle-elevatorBot: -5px;
         --shuttle-launchDistance: -120px;
     }
 
@@ -70,14 +75,16 @@ header.pageHeader {
         --mnt-width: 200%;
         --distance-multiplyer: 2.8;
 
-        --hero-title: 2rem;
-        --hero-devTitleLineHeight: 5rem;
-        --hero-subtitle: 1rem;
+        --hero-title: 1.75rem;
+        --hero-devTitle: 2.35rem;
+        --hero-devTitleLineHeight: 3rem;
+        --hero-subtitle: 0.9rem;
 
         --shuttle-launch: 200px;
         --shuttle-launchFlamesSpread: 127px;
         --shuttle-launchFlames: 50px;
         --shuttle-elevator: 77px;
+        --shuttle-elevatorBot: -5px;
         --shuttle-launchDistance: -120px;
     }
 
@@ -87,13 +94,15 @@ header.pageHeader {
         --distance-multiplyer: 3;
 
         --hero-title: 1.75rem;
-
+        --hero-devTitle: 2.35rem;
+        --hero-devTitleLineHeight: 3rem;
         --hero-subtitle: 0.9rem;
 
         --shuttle-launch: 200px;
         --shuttle-launchFlamesSpread: 127px;
         --shuttle-launchFlames: 31px;
         --shuttle-elevator: 77px;
+        --shuttle-elevatorBot: -5px;
         --shuttle-launchDistance: -120px;
     }
 }
@@ -257,7 +266,7 @@ header.pageHeader {
 .shuttleElevator {
     width: var(--shuttle-elevator);
     position: absolute;
-    bottom: -5px;
+    bottom: var(--shuttle-elevatorBot);
     right: 0;
 }
 
