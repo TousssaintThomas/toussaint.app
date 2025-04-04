@@ -2,6 +2,8 @@
 $focus-width: 386px;
 
 header.pageHeader {
+    --min-height: 760px;
+
     --focus-width: 1200px;
     --mnt-width: 1700px;
     --distance-multiplyer: 1;
@@ -38,7 +40,7 @@ header.pageHeader {
     @media (max-width: 1024px) {
         --focus-width: 650px;
         --mnt-width: 200%;
-        --distance-multiplyer: 2.2;
+        --distance-multiplyer: 2;
 
         --hero-title: 3rem;
         --hero-devTitleLineHeight: 5rem;
@@ -78,7 +80,7 @@ header.pageHeader {
         --hero-title: 1.75rem;
         --hero-devTitle: 2.35rem;
         --hero-devTitleLineHeight: 3rem;
-        --hero-subtitle: 0.9rem;
+        --hero-subtitle: 1.25rem;
 
         --shuttle-launch: 200px;
         --shuttle-launchFlamesSpread: 127px;
@@ -104,6 +106,14 @@ header.pageHeader {
         --shuttle-elevator: 77px;
         --shuttle-elevatorBot: -5px;
         --shuttle-launchDistance: -120px;
+    }
+
+    @media (max-width: 395px) {
+        --hero-devTitle: 2.3rem;
+    }
+
+    @media (max-width: 375px) {
+        --hero-devTitle: 2.2rem;
     }
 }
 
@@ -135,6 +145,7 @@ header.pageHeader {
 
 .pageHeader {
     background-color: grey;
+    min-height: var(--min-height);
     height: 100vh;
     position: relative;
     overflow: hidden;
