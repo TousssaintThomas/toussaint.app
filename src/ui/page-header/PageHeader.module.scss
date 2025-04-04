@@ -1,28 +1,60 @@
 /*$focus-width: 1200px;*/
 $focus-width: 386px;
 
-.pageHeader{
-    --focus-width: 386px;
+.heroText > div {
+    --focus-width: 1000px;
+}
 
-    @media (min-width: 640px) { // sm
-        --focus-width: 450px;
+@media (max-width: 1280px) { // xl
+    .heroText > div {
+        --focus-width: 1000px;
     }
+}
 
-    @media (min-width: 768px) { // md
-        --focus-width: 600px;
+@media (max-width: 1024px) { // lg
+    .heroText > div {
+        --focus-width: 650px;
     }
+}
 
-    @media (min-width: 1024px) { // lg
-        --focus-width: 800px;
+@media (max-width: 768px) { // md
+    .heroText > div {
+        --focus-width: 500px;
     }
+}
 
-    @media (min-width: 1280px) { // xl
-        --focus-width: 960px;
+@media (max-width: 640px) { // sm
+    .heroText > div {
+        --focus-width: 386px;
     }
+}
 
-    @media (min-width: 1536px) { // 2xl
-        --focus-width: 1100px;
+@media (max-width: 480px) {
+    .heroText > div {
+        --focus-width: 386px;
     }
+}
+
+.heroText > div {
+    max-width: var(--focus-width);
+    width: 90%;
+}
+
+.heroText > div > div {
+    max-width: 650px;
+    margin-bottom: 5em;
+}
+
+.heroTextDevName {
+    font-size: 2rem;
+}
+
+.devTitle {
+    font-size: 2.25rem;
+}
+
+.heroSubText {
+    font-size: 1rem;
 }
 
 
@@ -105,7 +137,7 @@ $focus-width: 386px;
 
 @media (max-width: 1280px) { // xl
     .backgroundAnim {
-        --distance-multiplyer: 2;
+        --distance-multiplyer: 1.5;
     }
 }
 
@@ -146,7 +178,7 @@ $focus-width: 386px;
 .cloudsBg {
     background-image: url('/CloudsTopFramed.svg');
     background-repeat: repeat-x;
-    background-size: auto;
+    background-size: 100%;
     width: 50%;
     height: 20em;
     margin-top: 80px;
@@ -221,27 +253,6 @@ $focus-width: 386px;
     z-index: 5;
 }
 
-.heroText > div {
-    max-width: $focus-width;
-    width: 90%;
-}
-
-.heroText > div > div {
-    max-width: 650px;
-    margin-bottom: 5em;
-}
-
-.heroTextDevName {
-    font-size: 2rem;
-}
-
-.devTitle {
-    font-size: 2.25rem;
-}
-
-.heroSubText {
-    font-size: 1rem;
-}
 
 .launchPadContainer {
     position: absolute;
