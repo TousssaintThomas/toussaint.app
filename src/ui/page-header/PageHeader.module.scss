@@ -419,6 +419,11 @@ header.pageHeader {
     100% { opacity: 0.9;  }
 }
 
+.rocketFlame {
+    width: var(--shuttle-launchFlames);
+    height: var(--shuttle-launchFlames);
+}
+
 .flameContainer {
     display: flex;
     width: var(--shuttle-launchFlamesSpread);
@@ -428,14 +433,15 @@ header.pageHeader {
     pointer-events: none;
     transition: opacity 0.4s ease;
 
+
+
     &.showFlames {
         opacity: 1;
         pointer-events: auto;
 
         .rocketFlame {
             animation: flameFlicker 0.3s infinite ease-in-out;
-            width: var(--shuttle-launchFlames);
-            height: var(--shuttle-launchFlames);
+
         }
     }
 
