@@ -1,53 +1,133 @@
-.navBar {
+@mixin navMobile {
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 64px);
+    opacity: 1;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+nav.navBar {
     width: 100vw;
-    background-color: black;
     min-height: 64px;
     position: fixed;
     top: 0;
     display: flex;
-    flex-direction: column;
-    // align-items: center;
-    padding: 0 24px;
-    // justify-content: center;
     z-index: 99;
+    background-color: black;
+
+    .iconToggle {
+        position: relative;
+        width: 24px;
+        height: 24px;
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    > div {
+        display: flex;
+
+        @media (min-width: 768px) {
+            justify-content: space-between;
+        }
+    }
+
+    > div:first-child {
+        height: 68px;
+        display: none;
+
+        @media (max-width: 768px) {
+           display: flex;
+        }
+    }
+
+    > div:nth-child(2) {
+        transition: opacity 300ms ease, visibility 300ms ease;
+        background-color: black;
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            @include navMobile;
+        }
+
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        li {
+            a {
+                padding: 6px 8px;
+                text-transform: uppercase;
+                display: flex;
+                cursor: pointer;
+                border-radius: 5px;
+                margin-right: 10px;
+                text-align: center;
+
+                img {
+                    margin-right: 6px;
+                }
+
+                p {
+                    line-height: 17px;
+                    margin-top: 3px;
+                    font-weight: bold;
+                }
+
+                &:hover {
+                    background-color: grey;
+                }
+            }
+
+            @media (max-width: 768px) {
+                margin-bottom: 2em;
+            }
+        }
+    }
+
+    &.menuOpen {
+        > div:nth-child(2) {
+            // must be set BEFORE the transition begins
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transition: opacity 300ms ease, visibility 300ms ease;
+        }
+    }
 }
 
-.navBar > div {
-    display: flex;
-}
-
-.navBar > div:first-child {
-    height: 68px;
-}
-
-.navBar > div:nth-child(2) {
-    position: absolute;
-    top: 64px; // just below the header
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 64px); // fill the rest of the screen
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 300ms ease, visibility 300ms ease;
-    background-color: black; // optional
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: center;
-    align-items: center;
-}
-
-.navBar.menuOpen {
-    height: 100vh;
-}
-
-.navBar.menuOpen > div:nth-child(2) {
-     // must be set BEFORE the transition begins
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transition: opacity 300ms ease, visibility 300ms ease;
+.navIcon {
+    margin-top: -2px;
+    margin-right: 0.75rem;
 }
 
 /*.menuOpen > div {
@@ -62,70 +142,3 @@
     justify-content: space-between;
     flex-direction: column;
 }*/
-
-.navBar ul {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-}
-
-.navBar ul li {
-    margin-bottom: 2em;
-}
-
-.navBar ul li a {
-    padding: 6px 8px;
-    text-transform: uppercase;
-    display: flex;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-right: 10px;
-    text-align: center;
-}
-
-.navBar ul li a:hover {
-    background-color: grey;
-}
-
-.navBar ul li a img {
-    margin-right: 6px;
-}
-
-.navBar ul li a p {
-    line-height: 17px;
-    margin-top: 3px;
-    font-weight: bold;
-}
-
-.navBar h1 {
-    font-size: 20em;
-}
-
-.iconToggle {
-    position: relative;
-    width: 24px;
-    height: 24px;
-}
-
-.iconToggle svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.2s ease;
-}
-
-.iconToggle .hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.iconToggle .visible {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.navIcon {
-    margin-top: -2px;
-    margin-right: 0.75rem;
-}

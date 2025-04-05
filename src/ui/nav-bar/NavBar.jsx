@@ -64,7 +64,10 @@ export default function NavBar() {
     return (
         <nav className={`${styles.navBar} ${menuOpen ? styles.menuOpen : ''}`}>
             <div>
-                <button onClick={() => setMenuOpen(!menuOpen)}>
+                <button
+                    className={`px-6`}
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
                     <div className={styles.iconToggle}>
                         <MenuIcon
                             className={
@@ -79,7 +82,7 @@ export default function NavBar() {
                     </div>
                 </button>
             </div>
-            <div>
+            <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ul>{navList}</ul>
                 <ul>{offsiteList}</ul>
             </div>
