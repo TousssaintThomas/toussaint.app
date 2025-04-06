@@ -22,15 +22,12 @@ export default function HeroAnimation({ launched }) {
                     />
                 </div>
             </div>
-            <div className={`${styles.cloudsBottom}`}>
-                <div>
-                    <div className={`${styles.cloudsBg2}`}></div>
-                    <div className={`${styles.cloudsBg3}`}></div>
-                </div>
-                <div>
-                    <div className={`${styles.cloudsBg2}`}></div>
-                    <div className={`${styles.cloudsBg3}`}></div>
-                </div>
+            <div className={styles.cloudsBottomForeground}>
+                {[...Array(2)].map((_, i) => (
+                    <div key={i}>
+                        <div className={styles.cloudsBg3}></div>
+                    </div>
+                ))}
             </div>
             <div className={`${styles.mountainRange}`}>
                 <Image
@@ -41,6 +38,13 @@ export default function HeroAnimation({ launched }) {
                     unoptimized
                     className={styles.mountainRangeImg}
                 />
+            </div>
+            <div className={styles.cloudsBottomBackground}>
+                {[...Array(2)].map((_, i) => (
+                    <div key={i}>
+                        <div className={styles.cloudsBg2}></div>
+                    </div>
+                ))}
             </div>
             <div className={`${styles.launchPadContainer}`}>
                 <div>
@@ -54,7 +58,10 @@ export default function HeroAnimation({ launched }) {
                             className={`${styles.shuttleLaunchPad}`}
                         />
                         <div
-                            className={`${styles.spaceShuttle} ${launched ? styles.launched : ''}`}
+                            className={`
+                                ${styles.spaceShuttle} 
+                                ${launched ? styles.launched : ''}
+                            `}
                         >
                             <Image
                                 src={'/SpaceShuttle.svg'}
@@ -64,7 +71,10 @@ export default function HeroAnimation({ launched }) {
                                 unoptimized={true}
                             />
                             <div
-                                className={`${styles.flameContainer} ${launched ? styles.showFlames : ''}`}
+                                className={`
+                                    ${styles.flameContainer} 
+                                    ${launched ? styles.showFlames : ''}
+                                `}
                             >
                                 {Array.from({ length: 5 }).map((_, i) => (
                                     <Image

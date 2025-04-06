@@ -1,0 +1,87 @@
+.cloudContainers {
+  width: 50%;
+}
+
+.cloudContainers2 {
+  padding: 0;
+  width: 100vw;
+  z-index: 20;
+  position: relative;
+}
+
+.cloudsTop {
+  position: absolute;
+  width: calc(200vw * var(--distance-multiplyer));
+  height: 100%;
+  display: flex;
+  top: 0;
+  left: 0;
+  animation: scrollClouds 70s linear infinite;
+}
+
+.cloudsBg {
+  background-image: url('/CloudsTopFramed.svg');
+  background-repeat: repeat-x;
+  background-size: 100%;
+  width: 50%;
+  height: 20em;
+  margin-top: 80px;
+}
+
+.cloudsBottomBackground {
+  position: absolute;
+  width: calc(200vw * var(--distance-multiplyer));
+  height: auto;
+  display: flex;
+  bottom: 8.5em;
+  left: 0;
+  animation: scrollClouds 200s linear infinite;
+  z-index: 0;
+
+  > div {
+    width: 50%;
+    position: relative;
+  }
+}
+
+.cloudsBottomForeground {
+  position: absolute;
+  width: calc(200vw * var(--distance-multiplyer));
+  height: auto;
+  display: flex;
+  bottom: 8.5em;
+  left: 0;
+  animation: scrollClouds 200s linear infinite;
+  z-index: 2;
+
+  > div {
+    width: 50%;
+    position: relative;
+  }
+}
+
+.cloudsBg2 {
+  background-image: url('/CloudsBottomBackground.svg');
+  background-repeat: repeat-x;
+  background-size: auto;
+  width: 100%;
+  height: 3em;
+  position: absolute;
+}
+
+.cloudsBg3 {
+  background-image: url('/CloudsBottomForground.svg');
+  background-repeat: repeat-x;
+  background-size: auto;
+  width: 100%;
+  height: 3em;
+}
+
+@keyframes scrollClouds {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100vw * var(--distance-multiplyer)));
+  }
+}

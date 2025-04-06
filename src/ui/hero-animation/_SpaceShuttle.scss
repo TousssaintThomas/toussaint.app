@@ -1,0 +1,175 @@
+.launchPadContainer {
+  --shuttle-launch: 400px;
+  --shuttle-launchFlamesSpread: 265px;
+  --shuttle-launchFlames: 75px;
+  --shuttle-elevator: 156px;
+  --shuttle-elevatorBot: -10px;
+  --shuttle-launchDistance: -400px;
+
+  @media (max-width: 1280px) {
+    --shuttle-launch: 300px;
+    --shuttle-launchFlamesSpread: 127px;
+    --shuttle-launchFlames: 50px;
+    --shuttle-elevator: 117px;
+    --shuttle-elevatorBot: -10px;
+    --shuttle-launchDistance: -120px;
+  }
+
+  @media (max-width: 1024px) {
+    --shuttle-launch: 200px;
+    --shuttle-launchFlamesSpread: 127px;
+    --shuttle-launchFlames: 50px;
+    --shuttle-elevator: 77px;
+    --shuttle-elevatorBot: -5px;
+    --shuttle-launchDistance: -120px;
+  }
+
+  @media (max-width: 768px) {
+    --shuttle-launch: 200px;
+    --shuttle-launchFlamesSpread: 127px;
+    --shuttle-launchFlames: 50px;
+    --shuttle-elevator: 77px;
+    --shuttle-elevatorBot: -5px;
+    --shuttle-launchDistance: -120px;
+  }
+
+  @media (max-width: 640px) {
+    --shuttle-launch: 200px;
+    --shuttle-launchFlamesSpread: 127px;
+    --shuttle-launchFlames: 50px;
+    --shuttle-elevator: 77px;
+    --shuttle-elevatorBot: -5px;
+    --shuttle-launchDistance: -120px;
+  }
+
+  @media (max-width: 480px) {
+    --shuttle-launch: 200px;
+    --shuttle-launchFlamesSpread: 127px;
+    --shuttle-launchFlames: 31px;
+    --shuttle-elevator: 77px;
+    --shuttle-elevatorBot: -5px;
+    --shuttle-launchDistance: -120px;
+  }
+
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+
+  > div {
+    max-width: var(--focus-width);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .launchPad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: var(--shuttle-launch);
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+
+    .spaceShuttle {
+      --shuttle-launchDistance: -400px;
+
+      width: 90%;
+      position: absolute;
+      bottom: 5px;
+      transition: transform 1s ease-out;
+      // transform: translateY(0);
+
+      &.launched {
+        transform: translateY(var(--shuttle-launchDistance));
+      }
+    }
+
+    .shuttleLaunchPad {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .shuttleElevator {
+      width: var(--shuttle-elevator);
+      position: absolute;
+      bottom: var(--shuttle-elevatorBot);
+      right: 0;
+    }
+
+    .rocketFlame {
+      width: var(--shuttle-launchFlames);
+      height: var(--shuttle-launchFlames);
+
+      &:nth-child(1) {
+        position: absolute;
+        left: 0;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        right: 0;
+      }
+
+      &:nth-child(3) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        top: 5px;
+      }
+
+      &:nth-child(4) {
+        position: absolute;
+        left: 60%;
+        transform: translateX(-50%);
+        z-index: 1;
+        top: 5px;
+      }
+
+      &:nth-child(5) {
+        position: absolute;
+        left: 40%;
+        transform: translateX(-50%);
+        z-index: 1;
+        top: 5px;
+      }
+    }
+
+    .flameContainer {
+      display: flex;
+      width: var(--shuttle-launchFlamesSpread);
+      position: relative;
+      margin: 0 auto;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+
+      &.showFlames {
+        opacity: 1;
+        pointer-events: auto;
+
+        .rocketFlame {
+          animation: flameFlicker 0.3s infinite ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+@keyframes flameFlicker {
+  0%   { opacity: 0.8;  }
+  25%  { opacity: 0.4;  }
+  50%  { opacity: 1;  }
+  75%  { opacity: 0.6; }
+  100% { opacity: 0.9;  }
+}

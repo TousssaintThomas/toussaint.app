@@ -1,0 +1,25 @@
+.moonIMG {
+  height: auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6em;
+
+  --moonImgSize: 12rem;
+
+  > div {
+    width: var(--focus-width);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 18em;
+
+    > div > img {
+      width: var(--moonImgSize);
+      height: var(--moonImgSize);
+    }
+  }
+}
