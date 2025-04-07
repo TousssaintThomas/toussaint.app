@@ -1,54 +1,40 @@
+@use '../_styles/_media' as *;
+
 .launchPadContainer {
-  --shuttle-launch: 400px;
-  --shuttle-launchFlamesSpread: 265px;
-  --shuttle-launchFlames: 75px;
-  --shuttle-elevator: 156px;
-  --shuttle-elevatorBot: -10px;
-  --shuttle-launchDistance: -400px;
+  --scale: 1;
 
-  @media (max-width: 1280px) {
-    --shuttle-launch: 300px;
-    --shuttle-launchFlamesSpread: 127px;
-    --shuttle-launchFlames: 50px;
-    --shuttle-elevator: 117px;
-    --shuttle-elevatorBot: -10px;
-    --shuttle-launchDistance: -120px;
+  --shuttle-launch-base: 400px;
+  --shuttle-launchFlamesSpread-base: 265px;
+  --shuttle-launchFlames-base: 75px;
+  --shuttle-elevator-base: 156px;
+  --shuttle-elevatorBot-base: -10px;
+  --shuttle-launchDistance-base: -400px;
+
+  --shuttle-launch: calc(var(--shuttle-launch-base) * var(--scale));
+  --shuttle-launchFlamesSpread: calc(var(--shuttle-launchFlamesSpread-base) * var(--scale));
+  --shuttle-launchFlames: calc(var(--shuttle-launchFlames-base) * var(--scale));
+  --shuttle-elevator: calc(var(--shuttle-elevator-base) * var(--scale));
+  --shuttle-elevatorBot: calc(var(--shuttle-elevatorBot-base) * var(--scale));
+  --shuttle-launchDistance: calc(var(--shuttle-launchDistance-base) * var(--scale));
+
+  @include media-down(xl) {
+    --scale: 0.75;
   }
 
-  @media (max-width: 1024px) {
-    --shuttle-launch: 200px;
-    --shuttle-launchFlamesSpread: 127px;
-    --shuttle-launchFlames: 50px;
-    --shuttle-elevator: 77px;
-    --shuttle-elevatorBot: -5px;
-    --shuttle-launchDistance: -120px;
+  @include media-down(lg) {
+    --scale: 0.7;
   }
 
-  @media (max-width: 768px) {
-    --shuttle-launch: 200px;
-    --shuttle-launchFlamesSpread: 127px;
-    --shuttle-launchFlames: 50px;
-    --shuttle-elevator: 77px;
-    --shuttle-elevatorBot: -5px;
-    --shuttle-launchDistance: -120px;
+  @include media-down(md) {
+    --scale: 0.7;
   }
 
-  @media (max-width: 640px) {
-    --shuttle-launch: 200px;
-    --shuttle-launchFlamesSpread: 127px;
-    --shuttle-launchFlames: 50px;
-    --shuttle-elevator: 77px;
-    --shuttle-elevatorBot: -5px;
-    --shuttle-launchDistance: -120px;
+  @include media-down(sm) {
+    --scale: 0.5;
   }
 
-  @media (max-width: 480px) {
-    --shuttle-launch: 200px;
-    --shuttle-launchFlamesSpread: 127px;
-    --shuttle-launchFlames: 31px;
-    --shuttle-elevator: 77px;
-    --shuttle-elevatorBot: -5px;
-    --shuttle-launchDistance: -120px;
+  @include media-down(xs) {
+    --scale: 0.5;
   }
 
   position: absolute;
@@ -81,13 +67,11 @@
     z-index: 1;
 
     .spaceShuttle {
-      --shuttle-launchDistance: -400px;
-
       width: 90%;
       position: absolute;
       bottom: 5px;
+      will-change: transform;
       transition: transform 1s ease-out;
-      // transform: translateY(0);
 
       &.launched {
         transform: translateY(var(--shuttle-launchDistance));
@@ -110,38 +94,42 @@
       width: var(--shuttle-launchFlames);
       height: var(--shuttle-launchFlames);
 
-      &:nth-child(1) {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
         position: absolute;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        transform: translateX(-50%);
+        top: 5px;
+      }
+
+      &:nth-child(1) {
         left: 0;
       }
 
       &:nth-child(2) {
-        position: absolute;
         right: 0;
       }
 
       &:nth-child(3) {
-        position: absolute;
         left: 50%;
-        transform: translateX(-50%);
         z-index: 2;
-        top: 5px;
       }
 
       &:nth-child(4) {
-        position: absolute;
         left: 60%;
-        transform: translateX(-50%);
         z-index: 1;
-        top: 5px;
       }
 
       &:nth-child(5) {
-        position: absolute;
         left: 40%;
-        transform: translateX(-50%);
         z-index: 1;
-        top: 5px;
       }
     }
 

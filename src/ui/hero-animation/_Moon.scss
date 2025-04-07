@@ -1,4 +1,8 @@
+@use '../_styles/_media' as *;
+
 .moonIMG {
+  --scale: 0.75;
+
   height: auto;
   display: flex;
   width: 100%;
@@ -6,7 +10,28 @@
   align-items: center;
   padding-top: 6em;
 
-  --moonImgSize: 12rem;
+  --moonImgSizeBase: 12rem;
+  --moonImgSize: calc(var(--moonImgSizeBase) * var(--scale));
+
+  @include media-down(xl) {
+    --scale: 0.75;
+  }
+
+  @include media-down(lg) {
+    --scale: 0.7;
+  }
+
+  @include media-down(md) {
+    --scale: 0.7;
+  }
+
+  @include media-down(sm) {
+    --scale: 0.75;
+  }
+
+  @include media-down(xs) {
+    --scale: 1;
+  }
 
   > div {
     width: var(--focus-width);

@@ -1,3 +1,5 @@
+$cloudsTopFramed: url('/CloudsTopFramed.svg');
+
 .cloudContainers {
   width: 50%;
 }
@@ -17,15 +19,15 @@
   top: 0;
   left: 0;
   animation: scrollClouds 70s linear infinite;
-}
 
-.cloudsBg {
-  background-image: url('/CloudsTopFramed.svg');
-  background-repeat: repeat-x;
-  background-size: 100%;
-  width: 50%;
-  height: 20em;
-  margin-top: 80px;
+  > div {
+    background-image: url('/CloudsTopFramed.svg');
+    background-repeat: repeat-x;
+    background-size: 100%;
+    width: 50%;
+    height: 20em;
+    margin-top: 80px;
+  }
 }
 
 .cloudsBottomBackground {
@@ -51,6 +53,7 @@
   display: flex;
   bottom: 8.5em;
   left: 0;
+  will-change: transform;
   animation: scrollClouds 200s linear infinite;
   z-index: 2;
 
