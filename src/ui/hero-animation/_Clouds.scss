@@ -1,19 +1,49 @@
-$cloudsTopFramed: url('/CloudsTopFramed.svg');
+@use '../_styles/_media' as *;
 
-.cloudContainers {
-  width: 50%;
-}
+$cloudsTop: url('/CloudsTopFramed.svg');
+$cloudsBottomBackground: url('/CloudsBottomBackground.svg');
+$cloudsBottomForeground: url('/CloudsBottomForground.svg');
 
-.cloudContainers2 {
-  padding: 0;
-  width: 100vw;
-  z-index: 20;
-  position: relative;
+$scrollCloudsBottom: scrollClouds 200s linear infinite;
+$cloudsBottomPadding: 8.5em;
+
+@keyframes scrollClouds {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100vw * var(--distance-multiplyer)));
+  }
 }
 
 .cloudsTop {
+  --scale: 1;
+
+  --clouds-top-width-base: 200vw;
+  --clouds-top-width: calc(var(--clouds-top-width-base) * var(--scale));
+
+  @include media-down(xl) {
+    --scale: 1.5;
+  }
+
+  @include media-down(lg) {
+    --scale: 2;
+  }
+
+  @include media-down(md) {
+    --scale: 2.5;
+  }
+
+  @include media-down(sm) {
+    --scale: 2.8;
+  }
+
+  @include media-down(xs) {
+    --scale: 3;
+  }
+
   position: absolute;
-  width: calc(200vw * var(--distance-multiplyer));
+  width: var(--clouds-top-width);
   height: 100%;
   display: flex;
   top: 0;
@@ -21,7 +51,7 @@ $cloudsTopFramed: url('/CloudsTopFramed.svg');
   animation: scrollClouds 70s linear infinite;
 
   > div {
-    background-image: url('/CloudsTopFramed.svg');
+    background-image: $cloudsTop;
     background-repeat: repeat-x;
     background-size: 100%;
     width: 50%;
@@ -30,61 +60,58 @@ $cloudsTopFramed: url('/CloudsTopFramed.svg');
   }
 }
 
-.cloudsBottomBackground {
+.cloudsBottomBackground,
+.cloudsBottomForeground {
+  --scale: 1;
+
+  --clouds-bot-width-base: 200vw;
+  --clouds-bot-foreground-width: calc(var(--clouds-top-width-base) * var(--scale));
+
+  @include media-down(xl) {
+    --scale: 1.5;
+  }
+
+  @include media-down(lg) {
+    --scale: 2;
+  }
+
+  @include media-down(md) {
+    --scale: 2.5;
+  }
+
+  @include media-down(sm) {
+    --scale: 2.8;
+  }
+
+  @include media-down(xs) {
+    --scale: 3;
+  }
+
   position: absolute;
   width: calc(200vw * var(--distance-multiplyer));
   height: auto;
   display: flex;
-  bottom: 8.5em;
+  bottom: 13em;
   left: 0;
-  animation: scrollClouds 200s linear infinite;
-  z-index: 0;
+  animation: $scrollCloudsBottom;
+  will-change: transform;
 
   > div {
+    background-repeat: repeat-x;
+    background-size: 100%;
     width: 50%;
-    position: relative;
+    height: 6em;
+  }
+}
+
+.cloudsBottomBackground {
+  > div {
+    background-image: $cloudsBottomBackground;
   }
 }
 
 .cloudsBottomForeground {
-  position: absolute;
-  width: calc(200vw * var(--distance-multiplyer));
-  height: auto;
-  display: flex;
-  bottom: 8.5em;
-  left: 0;
-  will-change: transform;
-  animation: scrollClouds 200s linear infinite;
-  z-index: 2;
-
   > div {
-    width: 50%;
-    position: relative;
-  }
-}
-
-.cloudsBg2 {
-  background-image: url('/CloudsBottomBackground.svg');
-  background-repeat: repeat-x;
-  background-size: auto;
-  width: 100%;
-  height: 3em;
-  position: absolute;
-}
-
-.cloudsBg3 {
-  background-image: url('/CloudsBottomForground.svg');
-  background-repeat: repeat-x;
-  background-size: auto;
-  width: 100%;
-  height: 3em;
-}
-
-@keyframes scrollClouds {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-100vw * var(--distance-multiplyer)));
+    background-image: $cloudsBottomForeground;
   }
 }

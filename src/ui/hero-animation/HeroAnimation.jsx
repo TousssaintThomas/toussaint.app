@@ -8,7 +8,7 @@ export default function HeroAnimation({ launched }) {
         <div className={`${styles.backgroundAnim}`}>
             <div className={styles.cloudsTop}>
                 {[...Array(2)].map((_, i) => (
-                    <div key={i} className={styles.cloudsBg}></div>
+                    <div key={i}></div>
                 ))}
             </div>
             <div className={`${styles.moonIMG}`}>
@@ -22,14 +22,17 @@ export default function HeroAnimation({ launched }) {
                     />
                 </div>
             </div>
-            <div className={styles.cloudsBottomForeground}>
+            <div className={`${styles.cloudsBottomBackground} z-0`}>
                 {[...Array(2)].map((_, i) => (
-                    <div key={i}>
-                        <div className={styles.cloudsBg3}></div>
-                    </div>
+                    <div key={i}></div>
                 ))}
             </div>
-            <div className={`${styles.mountainRange}`}>
+            <div className={`${styles.cloudsBottomForeground} z-2`}>
+                {[...Array(2)].map((_, i) => (
+                    <div key={i}></div>
+                ))}
+            </div>
+            <div className={`${styles.mountainRange} z-1`}>
                 <Image
                     src="/MountainRange.svg"
                     alt="Mountain Range"
@@ -39,14 +42,7 @@ export default function HeroAnimation({ launched }) {
                     className={styles.mountainRangeImg}
                 />
             </div>
-            <div className={styles.cloudsBottomBackground}>
-                {[...Array(2)].map((_, i) => (
-                    <div key={i}>
-                        <div className={styles.cloudsBg2}></div>
-                    </div>
-                ))}
-            </div>
-            <div className={`${styles.launchPadContainer}`}>
+            <div className={`${styles.launchPadContainer} z-3`}>
                 <div>
                     <div className={`${styles.launchPad}`}>
                         <Image
