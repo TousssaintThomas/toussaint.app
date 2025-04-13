@@ -72,11 +72,7 @@ $cloudsBottomPadding: 8.5em;
     animation: $scrollClouds;
 
     @if $class == cloudsTop {
-      @include responsive-cloud(
-        // Scale
-        3, 3.8, 3, 2.5, 1,
-        // Margin
-        top, 68px, 68px, 68px, 80px, 80px
+      @include responsive-cloud(3, 3.8, 3, 2.5, 1, top, 68px, 68px, 68px, 80px, 80px
       );
       @include scroll-clouds(200s);
     } @else {
