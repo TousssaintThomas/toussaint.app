@@ -1,7 +1,7 @@
 .mountainRange {
   display: block;
   height: 100%;
-  width: 100%;
+  width: 1500px;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -21,11 +21,13 @@
   }
 
   @media (max-width: 640px) {
-    width: 200%;
+    width: 300%;
+    left:125%;
   }
 
   @media (max-width: 480px) {
-    width: 200%;
+    width: 300%;
+    left:125%;
   }
 }
 

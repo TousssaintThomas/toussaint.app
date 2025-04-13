@@ -12,7 +12,20 @@ export default function HeroAnimation({ launched }) {
                 ))}
             </div>
             <div className={`${styles.moonIMG}`}>
-                <div>
+                <div
+                    className={`
+                    w-full 
+                    h-full
+                    flex 
+                    items-center 
+                    max-w-screen-xl 
+                    mx-auto 
+                    px-4
+                    sm:px-10
+                    md:px-8 
+                    lg:px-8
+                `}
+                >
                     <Image
                         src="/CresantMoon.svg"
                         alt="Moon"
@@ -42,8 +55,28 @@ export default function HeroAnimation({ launched }) {
                     className={styles.mountainRangeImg}
                 />
             </div>
-            <div className={`${styles.launchPadContainer} z-3`}>
-                <div>
+            <div
+                className={`
+                ${styles.launchPadContainer} 
+                
+            `}
+            >
+                <div
+                    className={`
+                    z-3
+                w-full 
+                h-full
+                flex 
+                justify-center 
+                items-center 
+                max-w-screen-xl 
+                mx-auto 
+                px-4
+                sm:px-10
+                md:px-8 
+                lg:px-8
+                `}
+                >
                     <div className={`${styles.launchPad}`}>
                         <Image
                             src={'/LaunchPad.svg'}

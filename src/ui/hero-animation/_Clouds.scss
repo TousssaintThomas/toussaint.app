@@ -4,114 +4,106 @@ $cloudsTop: url('/CloudsTopFramed.svg');
 $cloudsBottomBackground: url('/CloudsBottomBackground.svg');
 $cloudsBottomForeground: url('/CloudsBottomForground.svg');
 
-$scrollCloudsBottom: scrollClouds 200s linear infinite;
+$scrollClouds: scrollClouds 200s linear infinite;
 $cloudsBottomPadding: 8.5em;
+
+@mixin scroll-clouds($time) {
+  animation: scrollClouds #{time} linear infinite;
+}
+
+@mixin responsive-cloud(
+  $scale-xs,
+  $scale-sm,
+  $scale-md,
+  $scale-lg,
+  $scale-xl,
+  $side,
+  $margin-xs,
+  $margin-sm,
+  $margin-md,
+  $margin-lg,
+  $margin-xl
+) {
+  --scale: 1;
+  --clouds-width-base: 200vw;
+
+  #{$side}: $margin-xl;
+
+  @include media-down(xl) {
+    --scale: #{$scale-xl};
+    #{$side}: $margin-xl;
+  }
+
+  @include media-down(lg) {
+    --scale: #{$scale-lg};
+    #{$side}: $margin-lg;
+  }
+
+  @include media-down(md) {
+    --scale: #{$scale-md};
+    #{$side}: $margin-md;
+  }
+
+  @include media-down(sm) {
+    --scale: #{$scale-sm};
+    #{$side}: $margin-sm;
+  }
+
+  @include media-down(xs) {
+    --scale: #{$scale-xs};
+    #{$side}: $margin-xs;
+  }
+
+  --clouds-width: calc(var(--clouds-width-base) * var(--scale));
+  width: var(--clouds-width);
+}
+
+@each $class, $image in (
+  cloudsTop: $cloudsTop,
+  cloudsBottomBackground: $cloudsBottomBackground,
+  cloudsBottomForeground: $cloudsBottomForeground
+) {
+  .#{$class} {
+    position: absolute;
+    height: auto;
+    display: flex;
+    left: 0;
+    will-change: transform;
+    animation: $scrollClouds;
+
+    @if $class == cloudsTop {
+      @include responsive-cloud(
+        // Scale
+        3, 3.8, 3, 2.5, 1,
+        // Margin
+        top, 68px, 68px, 68px, 80px, 80px
+      );
+      @include scroll-clouds(200s);
+    } @else {
+      @include responsive-cloud(4, 3.8, 3, 3, 1, bottom, 1em, 2em, 7em, 7em, 6em);
+      @include scroll-clouds(125s);
+    }
+
+    > div {
+      background-repeat: repeat-x;
+      background-size: 100%;
+      width: 100%;
+      background-image: $image;
+
+      @if $class == cloudsTop {
+        height: 20em;
+      } @else {
+        height: 12em;
+      }
+    }
+  }
+}
 
 @keyframes scrollClouds {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100vw * var(--distance-multiplyer)));
-  }
-}
-
-.cloudsTop {
-  --scale: 1;
-
-  --clouds-top-width-base: 200vw;
-  --clouds-top-width: calc(var(--clouds-top-width-base) * var(--scale));
-
-  @include media-down(xl) {
-    --scale: 1.5;
-  }
-
-  @include media-down(lg) {
-    --scale: 2;
-  }
-
-  @include media-down(md) {
-    --scale: 2.5;
-  }
-
-  @include media-down(sm) {
-    --scale: 2.8;
-  }
-
-  @include media-down(xs) {
-    --scale: 3;
-  }
-
-  position: absolute;
-  width: var(--clouds-top-width);
-  height: 100%;
-  display: flex;
-  top: 0;
-  left: 0;
-  animation: scrollClouds 70s linear infinite;
-
-  > div {
-    background-image: $cloudsTop;
-    background-repeat: repeat-x;
-    background-size: 100%;
-    width: 50%;
-    height: 20em;
-    margin-top: 80px;
-  }
-}
-
-.cloudsBottomBackground,
-.cloudsBottomForeground {
-  --scale: 1;
-
-  --clouds-bot-width-base: 200vw;
-  --clouds-bot-foreground-width: calc(var(--clouds-top-width-base) * var(--scale));
-
-  @include media-down(xl) {
-    --scale: 1.5;
-  }
-
-  @include media-down(lg) {
-    --scale: 2;
-  }
-
-  @include media-down(md) {
-    --scale: 2.5;
-  }
-
-  @include media-down(sm) {
-    --scale: 2.8;
-  }
-
-  @include media-down(xs) {
-    --scale: 3;
-  }
-
-  position: absolute;
-  width: calc(200vw * var(--distance-multiplyer));
-  height: auto;
-  display: flex;
-  bottom: 13em;
-  left: 0;
-  animation: $scrollCloudsBottom;
-  will-change: transform;
-
-  > div {
-    background-repeat: repeat-x;
-    background-size: 100%;
-    width: 50%;
-    height: 7.5em;
-  }
-}
-
-.cloudsBottomBackground {
-  > div {
-    background-image: $cloudsBottomBackground;
-  }
-}
-
-.cloudsBottomForeground {
-  > div {
-    background-image: $cloudsBottomForeground;
+    transform: translateX(calc(-100vw * var(--scale)));
   }
 }
