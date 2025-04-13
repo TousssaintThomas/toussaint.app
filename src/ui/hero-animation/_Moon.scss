@@ -1,6 +1,6 @@
-@use '../_styles/_media' as *;
+@use '../_styles/media' as *;
 
-.moonIMG {
+.moon-img {
   --scale: 0.75;
 
   height: auto;
@@ -10,8 +10,8 @@
   align-items: center;
   padding-top: 6em;
 
-  --moonImgSizeBase: 12rem;
-  --moonImgSize: calc(var(--moonImgSizeBase) * var(--scale));
+  --moon-img-size-base: 12rem;
+  --moon-img-size: calc(var(--moon-img-size-base) * var(--scale));
 
   @include media-down(xl) {
     --scale: 0.75;
@@ -38,12 +38,12 @@
     justify-content: flex-end;
   }
 
-  @media (min-width: 768px) {
+  @media (width >= 768px) {
     padding-top: 18em;
 
     > div > img {
-      width: var(--moonImgSize);
-      height: var(--moonImgSize);
+      width: var(--moon-img-size);
+      height: var(--moon-img-size);
     }
   }
 }

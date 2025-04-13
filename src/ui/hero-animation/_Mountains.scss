@@ -1,4 +1,4 @@
-.mountainRange {
+.mountain-range {
   display: block;
   height: 100%;
   width: 1500px;
@@ -8,37 +8,33 @@
   transform: translateX(-50%);
   z-index: 1;
 
-  @media (max-width: 1280px) {
+  @media (width <= 1280px) {
     width: 100%;
   }
 
-  @media (max-width: 1024px) {
+  @media (width <= 1024px) {
     width: 200%;
   }
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 200%;
   }
 
-  @media (max-width: 640px) {
+  @media (width <= 640px) {
     width: 300%;
     left:125%;
   }
 
-  @media (max-width: 480px) {
+  @media (width <= 480px) {
     width: 300%;
     left:125%;
   }
 }
 
-.mountainRangeImg {
+.mountain-mange-img {
   width: 100%;
   height: auto;
   position: absolute;
   bottom: 0;
   left: 0;
-}
-
-.mountainRangeIMG {
-  z-index: -1;
 }

@@ -3,67 +3,51 @@
 @use 'Moon';
 @use 'Mountains';
 
-.backgroundAnim {
-
-  @media (max-width: 1280px) {
-    --focus-width: 800px;
+.background-anim {
+  @media (width <= 1280px) {
     --mnt-width: 100%;
-    --distance-multiplyer: 1.5;
-
     --hero-title: 3.5rem;
-    --hero-devTitleLineHeight: 5rem;
+    --hero-dev-title-line-height: 5rem;
     --hero-subtitle: 1.4rem;
   }
 
-  @media (max-width: 1024px) {
-    --focus-width: 650px;
+  @media (width <= 1024px) {
     --mnt-width: 200%;
-    --distance-multiplyer: 2;
-
     --hero-title: 3rem;
-    --hero-devTitleLineHeight: 5rem;
+    --hero-dev-title-line-height: 5rem;
     --hero-subtitle: 1.3rem;
   }
 
-  @media (max-width: 768px) {
-    --focus-width: 500px;
+  @media (width <= 768px) {
     --mnt-width: 200%;
-    --distance-multiplyer: 2.5;
-
     --hero-title: 2.5rem;
-    --hero-devTitle: 3.25rem;
-    --hero-devTitleLineHeight: 4rem;
+    --hero-dev-title: 3.25rem;
+    --hero-dev-title-line-height: 4rem;
     --hero-subtitle: 1.2rem;
   }
 
-  @media (max-width: 640px) {
-    --focus-width: 386px;
+  @media (width <= 640px) {
     --mnt-width: 200%;
-    --distance-multiplyer: 2.8;
-
     --hero-title: 1.75rem;
-    --hero-devTitle: 2.35rem;
-    --hero-devTitleLineHeight: 3rem;
+    --hero-dev-title: 2.35rem;
+    --hero-dev-title-line-height: 3rem;
     --hero-subtitle: 1.25rem;
   }
 
-  @media (max-width: 480px) {
-    --focus-width: 386px;
+  @media (width <= 480px) {
     --mnt-width: 200%;
-    --distance-multiplyer: 3;
-
     --hero-title: 1.75rem;
-    --hero-devTitle: 2.25rem;
-    --hero-devTitleLineHeight: 3rem;
+    --hero-dev-title: 2.25rem;
+    --hero-dev-title-line-height: 3rem;
     --hero-subtitle: 1.25rem;
   }
 
-  @media (max-width: 395px) {
-    --hero-devTitle: 2.3rem;
+  @media (width <= 395px) {
+    --hero-dev-title: 2.3rem;
   }
 
-  @media (max-width: 375px) {
-    --hero-devTitle: 2.2rem;
+  @media (width <= 375px) {
+    --hero-dev-title: 2.2rem;
   }
 
   position: absolute;
@@ -72,3 +56,4 @@
   background: linear-gradient(to top, #0d006a 0%, #000 77%) no-repeat;
   background-size: cover;
 }
+

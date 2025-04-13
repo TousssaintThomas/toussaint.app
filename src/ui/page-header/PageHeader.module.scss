@@ -1,157 +1,142 @@
-/*$focus-width: 1200px;*/
+/* $focus-width: 1200px; */
 $focus-width: 386px;
 
-header.pageHeader {
+header.page-header {
     --min-height: 760px;
-
     --focus-width: 1200px;
     --mnt-width: 1700px;
     --distance-multiplyer: 1;
-
     --hero-title: 3.5rem;
-    --hero-devTitle: 3.75rem;
-    --hero-devTitleLineHeight: 4rem;
+    --hero-dev-title: 3.75rem;
+    --hero-dev-title-line-height: 4rem;
     --hero-subtitle: 1.5rem;
-
     --shuttle-launch: 400px;
-    --shuttle-launchFlamesSpread: 265px;
-    --shuttle-launchFlames: 75px;
+    --shuttle-launch-flames-spread: 265px;
+    --shuttle-launch-flames: 75px;
     --shuttle-elevator: 156px;
-    --shuttle-elevatorBot: -10px;
-    --shuttle-launchDistance: -400px;
+    --shuttle-elevator-bot: -10px;
+    --shuttle-launch-distance: -400px;
 
-    @media (max-width: 1280px) {
+    @media (width <= 1280px) {
         --focus-width: 800px;
         --mnt-width: 100%;
         --distance-multiplyer: 1.5;
-
         --hero-title: 3.5rem;
-        --hero-devTitleLineHeight: 5rem;
+        --hero-dev-title-line-height: 5rem;
         --hero-subtitle: 1.4rem;
-
         --shuttle-launch: 300px;
-        --shuttle-launchFlamesSpread: 127px;
-        --shuttle-launchFlames: 50px;
+        --shuttle-launch-flames-spread: 127px;
+        --shuttle-launch-flames: 50px;
         --shuttle-elevator: 117px;
-        --shuttle-elevatorBot: -10px;
-        --shuttle-launchDistance: -120px;
+        --shuttle-elevator-bot: -10px;
+        --shuttle-launch-distance: -120px;
     }
 
-    @media (max-width: 1024px) {
+    @media (width <= 1024px) {
         --focus-width: 650px;
         --mnt-width: 200%;
         --distance-multiplyer: 2;
-
         --hero-title: 3rem;
-        --hero-devTitleLineHeight: 5rem;
+        --hero-dev-title-line-height: 5rem;
         --hero-subtitle: 1.3rem;
-
         --shuttle-launch: 200px;
-        --shuttle-launchFlamesSpread: 127px;
-        --shuttle-launchFlames: 50px;
+        --shuttle-launch-flames-spread: 127px;
+        --shuttle-launch-flames: 50px;
         --shuttle-elevator: 77px;
-        --shuttle-elevatorBot: -5px;
-        --shuttle-launchDistance: -120px;
+        --shuttle-elevator-bot: -5px;
+        --shuttle-launch-distance: -120px;
     }
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
         --focus-width: 500px;
         --mnt-width: 200%;
         --distance-multiplyer: 2.5;
-
         --hero-title: 2.5rem;
-        --hero-devTitle: 3.25rem;
-        --hero-devTitleLineHeight: 4rem;
+        --hero-dev-title: 3.25rem;
+        --hero-dev-title-line-height: 4rem;
         --hero-subtitle: 1.2rem;
-
         --shuttle-launch: 200px;
-        --shuttle-launchFlamesSpread: 127px;
-        --shuttle-launchFlames: 50px;
+        --shuttle-launch-flames-spread: 127px;
+        --shuttle-launch-flames: 50px;
         --shuttle-elevator: 77px;
-        --shuttle-elevatorBot: -5px;
-        --shuttle-launchDistance: -120px;
+        --shuttle-elevator-bot: -5px;
+        --shuttle-launch-distance: -120px;
     }
 
-    @media (max-width: 640px) {
+    @media (width <= 640px) {
         --focus-width: 386px;
         --mnt-width: 200%;
         --distance-multiplyer: 2.8;
-
         --hero-title: 1.75rem;
-        --hero-devTitle: 2.35rem;
-        --hero-devTitleLineHeight: 3rem;
+        --hero-dev-title: 2.35rem;
+        --hero-dev-title-line-height: 3rem;
         --hero-subtitle: 1.25rem;
-
         --shuttle-launch: 200px;
-        --shuttle-launchFlamesSpread: 127px;
-        --shuttle-launchFlames: 50px;
+        --shuttle-launch-flames-spread: 127px;
+        --shuttle-launch-flames: 50px;
         --shuttle-elevator: 77px;
-        --shuttle-elevatorBot: -5px;
-        --shuttle-launchDistance: -120px;
+        --shuttle-elevator-bot: -5px;
+        --shuttle-launch-distance: -120px;
     }
 
-    @media (max-width: 480px) {
+    @media (width <= 480px) {
         --focus-width: 386px;
         --mnt-width: 200%;
         --distance-multiplyer: 3;
-
         --hero-title: 1.75rem;
-        --hero-devTitle: 2.25rem;
-        --hero-devTitleLineHeight: 3rem;
+        --hero-dev-title: 2.25rem;
+        --hero-dev-title-line-height: 3rem;
         --hero-subtitle: 1.25rem;
-
         --shuttle-launch: 200px;
-        --shuttle-launchFlamesSpread: 127px;
-        --shuttle-launchFlames: 31px;
+        --shuttle-launch-flames-spread: 127px;
+        --shuttle-launch-flames: 31px;
         --shuttle-elevator: 77px;
-        --shuttle-elevatorBot: -5px;
-        --shuttle-launchDistance: -120px;
+        --shuttle-elevator-bot: -5px;
+        --shuttle-launch-distance: -120px;
     }
 
-    @media (max-width: 395px) {
-        --hero-devTitle: 2.3rem;
+    @media (width <= 395px) {
+        --hero-dev-title: 2.3rem;
     }
 
-    @media (max-width: 375px) {
-        --hero-devTitle: 2.2rem;
+    @media (width <= 375px) {
+        --hero-dev-title: 2.2rem;
     }
-}
 
-header.pageHeader {
     background-color: grey;
     min-height: var(--min-height);
     height: 100vh;
     position: relative;
     overflow: hidden;
 
-    .heroText {
+    .hero-text {
         z-index: 5;
 
         > div {
             margin-bottom: 5em;
 
-            .heroTextDevName {
+            .hero-text-dev-name {
                 font-size: var(--hero-title);
-                line-height: var(--hero-devTitleLineHeight);
+                line-height: var(--hero-dev-title-line-height);
             }
 
-            .devTitle {
-                font-size: var(--hero-devTitle);
-                line-height: var(--hero-devTitleLineHeight);
+            .dev-title {
+                font-size: var(--hero-dev-title);
+                line-height: var(--hero-dev-title-line-height);
             }
 
-            .heroSubText {
+            .hero-sub-text {
                 font-size: var(--hero-subtitle);
             }
 
-            .headerDivider {
+            .header-divider {
                 height: 10px;
                 width: 100px;
                 background-color: white;
-                margin: 18px 0 40px 0;
+                margin: 18px 0 40px;
             }
 
-            .outlinedButton {
+            .out-lined-button {
                 color: white;
                 border: 2px solid white;
                 background: transparent;
@@ -165,17 +150,10 @@ header.pageHeader {
                 transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
                 &:hover {
-                    background: rgba(255, 255, 255, 0.1);
+                    background: rgb(255 255 255 / 10%);
                     border-color: white;
                 }
             }
         }
     }
 }
-
-
-
-
-
-
-

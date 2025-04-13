@@ -1,4 +1,4 @@
-@mixin navMobile {
+@mixin nav-mobile {
     flex-direction: column;
     justify-content: center;
     height: calc(100vh - 64px);
@@ -11,7 +11,7 @@
     pointer-events: none;
 }
 
-nav.navBar {
+nav.nav-bar {
     width: 100vw;
     min-height: 64px;
     position: fixed;
@@ -20,7 +20,7 @@ nav.navBar {
     z-index: 99;
     background-color: black;
 
-    .iconToggle {
+    .icon-toggle {
         position: relative;
         width: 24px;
         height: 24px;
@@ -46,7 +46,7 @@ nav.navBar {
     > div {
         display: flex;
 
-        @media (min-width: 768px) {
+        @media (width >= 768px) {
             justify-content: space-between;
         }
     }
@@ -55,7 +55,7 @@ nav.navBar {
         height: 68px;
         display: none;
 
-        @media (max-width: 768px) {
+        @media (width <= 768px) {
            display: flex;
         }
     }
@@ -67,8 +67,8 @@ nav.navBar {
         flex-grow: 1;
         align-items: center;
 
-        @media (max-width: 768px) {
-            @include navMobile;
+        @media (width <= 768px) {
+            @include nav-mobile;
         }
 
     }
@@ -79,7 +79,7 @@ nav.navBar {
         text-align: center;
         align-items: center;
 
-        @media (max-width: 768px) {
+        @media (width <= 768px) {
             flex-direction: column;
         }
 
@@ -108,13 +108,13 @@ nav.navBar {
                 }
             }
 
-            @media (max-width: 768px) {
+            @media (width <= 768px) {
                 margin-bottom: 2em;
             }
         }
     }
 
-    &.menuOpen {
+    &.menu-open {
         > div:nth-child(2) {
             // must be set BEFORE the transition begins
             opacity: 1;
@@ -125,20 +125,20 @@ nav.navBar {
     }
 }
 
-.navIcon {
+.nav-icon {
     margin-top: -2px;
     margin-right: 0.75rem;
 }
 
-/*.menuOpen > div {
+/* .menu-open > div {
     display: flex;
     // margin-top: 64px;
     position: absolute;
-}*/
+} */
 
-/*.navBar > div {
+/* .nav-bar > div {
     width: 1300px;
     // display: flex;
     justify-content: space-between;
     flex-direction: column;
-}*/
+} */
