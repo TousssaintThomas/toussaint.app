@@ -1,8 +1,10 @@
+$avatar-size: 300px;
+
 .animatedAvatar {
     color: blue;
     background-color: white;
-    min-width: 200px;
-    height: 200px;
+    min-width: $avatar-size;
+    height: $avatar-size;
     border-radius: 50%;
     display: flex;
     justify-content: center;

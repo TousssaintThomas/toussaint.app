@@ -51,12 +51,12 @@ export default function WorkExp() {
                     </div>
                     <div
                         className={
-                            'flex-12/12 text-base/7 role-description text-justify'
+                            'flex-12/12 text-lg role-description text-justify'
                         }
                     >
                         <ReactMarkdown>{role.description}</ReactMarkdown>
                     </div>
-                    <div className={`flex flex-col px-6`}>
+                    <div className={`flex flex-col`}>
                         <p className={'pb-2 text-sm'}>Applied Skills:</p>
                         <ul className={'flex-12/12'}>{skillList}</ul>
                     </div>
