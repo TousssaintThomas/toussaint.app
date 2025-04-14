@@ -5,13 +5,13 @@ import Image from 'next/image'
 
 export default function HeroAnimation({ launched }) {
     return (
-        <div className={`${styles.backgroundAnim}`}>
-            <div className={styles.cloudsTop}>
+        <div className={`${styles['background-anim']}`}>
+            <div className={styles['clouds-top']}>
                 {[...Array(2)].map((_, i) => (
                     <div key={i}></div>
                 ))}
             </div>
-            <div className={`${styles.moonIMG}`}>
+            <div className={`${styles['moon-img']}`}>
                 <div
                     className={`
                     w-full 
@@ -35,60 +35,60 @@ export default function HeroAnimation({ launched }) {
                     />
                 </div>
             </div>
-            <div className={`${styles.cloudsBottomBackground} z-0`}>
+            <div className={`${styles['clouds-bottom-background']} z-0`}>
                 {[...Array(2)].map((_, i) => (
                     <div key={i}></div>
                 ))}
             </div>
-            <div className={`${styles.cloudsBottomForeground} z-2`}>
+            <div className={`${styles['clouds-bottom-foreground']} z-2`}>
                 {[...Array(2)].map((_, i) => (
                     <div key={i}></div>
                 ))}
             </div>
-            <div className={`${styles.mountainRange} z-1`}>
+            <div className={`${styles['mountain-range']} z-1`}>
                 <Image
                     src="/MountainRange.svg"
                     alt="Mountain Range"
                     width={2000}
                     height={300}
                     unoptimized
-                    className={styles.mountainRangeImg}
+                    className={styles['mountain-range-img']}
                 />
             </div>
             <div
                 className={`
-                ${styles.launchPadContainer} 
+                ${styles['launch-pad-container']} 
                 
             `}
             >
                 <div
                     className={`
                     z-3
-                w-full 
-                h-full
-                flex 
-                justify-center 
-                items-center 
-                max-w-screen-xl 
-                mx-auto 
-                px-4
-                sm:px-10
-                md:px-8 
-                lg:px-8
+                    w-full 
+                    h-full
+                    flex 
+                    justify-center 
+                    items-center 
+                    max-w-screen-xl 
+                    mx-auto 
+                    px-4
+                    sm:px-10
+                    md:px-8 
+                    lg:px-8
                 `}
                 >
-                    <div className={`${styles.launchPad}`}>
+                    <div className={`${styles['launch-pad']}`}>
                         <Image
                             src={'/LaunchPad.svg'}
                             alt={'n/a'}
                             width={2000}
                             height={300}
                             unoptimized={true}
-                            className={`${styles.shuttleLaunchPad}`}
+                            className={`${styles['shuttle-launch-pad']}`}
                         />
                         <div
                             className={`
-                                ${styles.spaceShuttle} 
+                                ${styles['space-shuttle']} 
                                 ${launched ? styles.launched : ''}
                             `}
                         >
@@ -101,8 +101,8 @@ export default function HeroAnimation({ launched }) {
                             />
                             <div
                                 className={`
-                                    ${styles.flameContainer} 
-                                    ${launched ? styles.showFlames : ''}
+                                    ${styles['flame-container']} 
+                                    ${launched ? styles['show-flames'] : ''}
                                 `}
                             >
                                 {Array.from({ length: 5 }).map((_, i) => (
@@ -113,7 +113,7 @@ export default function HeroAnimation({ launched }) {
                                         width={100}
                                         height={100}
                                         unoptimized
-                                        className={styles.rocketFlame}
+                                        className={styles['rocket-flame']}
                                     />
                                 ))}
                             </div>
@@ -124,7 +124,7 @@ export default function HeroAnimation({ launched }) {
                             width={2000}
                             height={300}
                             unoptimized={true}
-                            className={`${styles.shuttleElevator}`}
+                            className={`${styles['shuttle-elevator']}`}
                         />
                     </div>
                 </div>

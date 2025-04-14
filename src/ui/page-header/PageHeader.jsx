@@ -24,11 +24,11 @@ export default function PageHeader() {
     }, [])
 
     return (
-        <header className={`${styles.pageHeader} flex`}>
+        <header className={`${styles['page-header']} flex`}>
             <HeroAnimation launched={launched}></HeroAnimation>
             <div
                 className={`
-                    ${styles.heroText} 
+                    ${styles['hero-text']} 
                     w-full 
                     h-full
                     flex 
@@ -44,15 +44,17 @@ export default function PageHeader() {
                 <div
                     className={`sm:max-w-xl md:max-w-8/10 lg:max-w-8/10 xl:max-w-xl`}
                 >
-                    <h1 className={`${styles.heroTextDevName}`}>
+                    <h1 className={`${styles['hero-text-dev-name']}`}>
                         {HeaderText.name}
                     </h1>
-                    <h1 className={`${styles.devTitle}`}>{HeaderText.title}</h1>
-                    <p className={`${styles.heroSubText}`}>
+                    <h1 className={`${styles['dev-title']}`}>
+                        {HeaderText.title}
+                    </h1>
+                    <p className={`${styles['hero-sub-text']}`}>
                         {HeaderText.subText}
                     </p>
-                    <div className={`${styles.headerDivider}`}></div>
-                    <a href="#summary" className={styles.outlinedButton}>
+                    <div className={`${styles['header-divider']}`}></div>
+                    <a href="#summary" className={styles['outlined-button']}>
                         Learn More
                     </a>
                 </div>

@@ -1,4 +1,4 @@
-import styles from './AnimatedAvatar.module.css'
+import styles from './AnimatedAvatar.module.scss'
 import Image from 'next/image'
 
 export default function AnimatedAvatar({ src, alt = 'Avatar' }) {

@@ -1,13 +1,16 @@
 @use '../_styles/media' as *;
 
-$clouds-top: url('/clouds-topFramed.svg');
-$clouds-bottom-background: url('/clouds-bottom-background.svg');
-$clouds-bottom-foreground: url('/CloudsBottomForground.svg');
+$clouds-top: url('/CloudsTopFramed.svg');
+$clouds-bottom-background: url('/CloudsBottomBackground.svg');
+$clouds-bottom-foreground: url('/CloudsBottomForeground.svg');
 $scroll-clouds: scroll-clouds 200s linear infinite;
 $clouds-bottom-padding: 8.5em;
 
 @mixin scroll-clouds($time) {
-  animation: scroll-clouds #{time} linear infinite;
+  animation-name: scroll-clouds;
+  animation-duration: #{$time};
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @mixin responsive-cloud(

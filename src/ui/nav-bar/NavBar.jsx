@@ -41,7 +41,7 @@ export default function NavBar() {
         return (
             <li key={item.name}>
                 <a href={item.href} onClick={() => setMenuOpen(false)}>
-                    <Icon className={styles.navIcon} />
+                    <Icon className={styles['nav-icon']} />
                     <p>{item.name}</p>
                 </a>
             </li>
@@ -54,7 +54,7 @@ export default function NavBar() {
         return (
             <li key={item.name}>
                 <a href={item.href}>
-                    <Icon className={styles.navIcon} />
+                    <Icon className={styles['nav-icon']} />
                     <p>{item.name}</p>
                 </a>
             </li>
@@ -62,13 +62,15 @@ export default function NavBar() {
     })
 
     return (
-        <nav className={`${styles.navBar} ${menuOpen ? styles.menuOpen : ''}`}>
+        <nav
+            className={`${styles['nav-bar']} ${menuOpen ? styles['menu-open'] : ''}`}
+        >
             <div>
                 <button
                     className={`px-6`}
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
-                    <div className={styles.iconToggle}>
+                    <div className={styles['icon-toggle']}>
                         <MenuIcon
                             className={
                                 menuOpen ? styles.hidden : styles.visible
