@@ -39,8 +39,7 @@ export default function WorkExp() {
                     <div
                         className="
 					    flex
-					    flex-wrap
-					    px-6"
+					    flex-wrap"
                     >
                         <p className={'flex-1/2 text-base/7'}>
                             {role.company}, {role.location}
@@ -67,7 +66,7 @@ export default function WorkExp() {
     })
 
     return (
-        <section id={'resume'} className={'grid place-items-center pt-10 px-6'}>
+        <section id={'resume'} className={'grid place-items-center'}>
             <div className="w-full flex flex-col items-center text-center">
                 <h1
                     className={`${styles['section-header']} text-xl md:text-left`}
