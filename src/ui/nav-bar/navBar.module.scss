@@ -116,7 +116,6 @@ nav.nav-bar {
 
     &.menu-open {
         > div:nth-child(2) {
-            // must be set BEFORE the transition begins
             opacity: 1;
             visibility: visible;
             pointer-events: auto;
@@ -129,16 +128,3 @@ nav.nav-bar {
     margin-top: -2px;
     margin-right: 0.75rem;
 }
-
-/* .menu-open > div {
-    display: flex;
-    // margin-top: 64px;
-    position: absolute;
-} */
-
-/* .nav-bar > div {
-    width: 1300px;
-    // display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-} */

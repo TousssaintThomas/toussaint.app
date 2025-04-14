@@ -42,6 +42,17 @@ footer {
   height: 60px;
 }
 
+.section-header-divider {
+  height: 10px;
+  width: 100px;
+  background-color: white;
+}
+
+.section-header {
+  font-size: 32px;
+  margin-bottom: 0.25rem;
+}
+
 .md-chip {
   display: inline-block;
   background: grey;

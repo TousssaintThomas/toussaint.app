@@ -19,8 +19,8 @@
   }
 
   @media (width <= 480px) {
-    --section-header-size: 1rem;
-    --summary-section-txt-size: 1rem;
+    /*--section-header-size: 1rem;
+    --summary-section-txt-size: 1rem;*/
   }
 
   @media (width <= 395px) {
@@ -34,8 +34,8 @@
   }
 
   h1 {
-    font-size: var(--section-header-size);
-    margin-bottom: 0.2em;
+    /*font-size: var(--section-header-size);
+    margin-bottom: 0.2em;*/
   }
 }
 
@@ -100,13 +100,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em;
 }
 
 .mock-ide {
   position: absolute;
   z-index: 1;
-  width: 70%;
+  width: 20.5rem;
 }
 
 .fan-out-container {

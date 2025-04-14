@@ -5,21 +5,18 @@
 
 .background-anim {
   @media (width <= 1280px) {
-    --mnt-width: 100%;
     --hero-title: 3.5rem;
     --hero-dev-title-line-height: 5rem;
     --hero-subtitle: 1.4rem;
   }
 
   @media (width <= 1024px) {
-    --mnt-width: 200%;
     --hero-title: 3rem;
     --hero-dev-title-line-height: 5rem;
     --hero-subtitle: 1.3rem;
   }
 
   @media (width <= 768px) {
-    --mnt-width: 200%;
     --hero-title: 2.5rem;
     --hero-dev-title: 3.25rem;
     --hero-dev-title-line-height: 4rem;
@@ -27,7 +24,6 @@
   }
 
   @media (width <= 640px) {
-    --mnt-width: 200%;
     --hero-title: 1.75rem;
     --hero-dev-title: 2.35rem;
     --hero-dev-title-line-height: 3rem;
@@ -35,7 +31,6 @@
   }
 
   @media (width <= 480px) {
-    --mnt-width: 200%;
     --hero-title: 1.75rem;
     --hero-dev-title: 2.25rem;
     --hero-dev-title-line-height: 3rem;

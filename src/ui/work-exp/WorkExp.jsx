@@ -69,12 +69,16 @@ export default function WorkExp() {
     return (
         <section id={'resume'} className={'grid place-items-center pt-10 px-6'}>
             <div className="w-full flex flex-col items-center text-center">
-                <h1 className={`${styles.sectionHeader} text-xl md:text-left`}>
+                <h1
+                    className={`${styles['section-header']} text-xl md:text-left`}
+                >
                     Experience
                 </h1>
-                <div className={`${styles.sectionDivider} mt-2 mb-16`}></div>
+                <div
+                    className={`${styles['section-divider']} mt-2 mb-16`}
+                ></div>
             </div>
-            <div className={styles.roleList}>{roleList}</div>
+            <div className={styles['role-list']}>{roleList}</div>
         </section>
     )
 }
