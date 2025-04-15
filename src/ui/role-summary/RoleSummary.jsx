@@ -4,6 +4,7 @@ import styles from '@/ui/role-summary/RoleSummary.module.scss'
 import Image from 'next/image'
 import { motion } from 'motion/react'
 import AnimatedChips from '@/ui/role-summary/AnimatedChips'
+import AboutMeTxt from './about-me.json'
 
 export default function RoleSummary() {
     const box = {
@@ -49,19 +50,23 @@ export default function RoleSummary() {
             </div>
             <div className={`flex-1 md:px-6 lg:px-8 flex items-center`}>
                 <div className="w-full">
-                    <div className="w-full mb-8 flex flex-col items-center text-center">
-                        <h1 className={`mb-4 section-header`}>About Me</h1>
+                    <div
+                        className="
+                        w-full
+                        mb-8
+                        flex
+                        flex-col
+                        items-center
+                        text-center
+                    "
+                    >
+                        <h1 className={`mb-4 section-header`}>
+                            {AboutMeTxt.title}
+                        </h1>
                         <div className="section-header-divider"></div>
                     </div>
                     <p className={`text-lg text-justify`}>
-                        I'm a full-stack developer with over a decade of
-                        experience building fast, secure, and scalable web
-                        applications. My expertise lies in JavaScript and
-                        Node.js, with deep knowledge of modern front-end
-                        frameworks like React, Vue, and Svelte. Whether it’s a
-                        dynamic web app or a high-performance static site, I
-                        focus on clean, maintainable code and thoughtful user
-                        experiences from front to back.
+                        {AboutMeTxt.content}
                     </p>
                 </div>
             </div>
