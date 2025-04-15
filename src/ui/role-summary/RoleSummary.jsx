@@ -53,9 +53,7 @@ export default function RoleSummary() {
                         <h1 className={`mb-4 section-header`}>About Me</h1>
                         <div className="section-header-divider"></div>
                     </div>
-                    <p
-                        className={`${styles['summary-section-txt']} text-justify`}
-                    >
+                    <p className={`text-lg text-justify`}>
                         I'm a full-stack developer with over a decade of
                         experience building fast, secure, and scalable web
                         applications. My expertise lies in JavaScript and
