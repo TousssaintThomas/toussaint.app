@@ -2,13 +2,10 @@
     flex-direction: column;
     justify-content: center;
     height: calc(100vh - 64px);
-    opacity: 1;
     position: absolute;
     top: 64px;
     left: 0;
     width: 100%;
-    visibility: hidden;
-    pointer-events: none;
 }
 
 nav.nav-bar {
@@ -19,6 +16,12 @@ nav.nav-bar {
     display: flex;
     z-index: 99;
     background-color: black;
+
+    &.menu-open {
+        > div:nth-child(2) {
+
+        }
+    }
 
     .icon-toggle {
         position: relative;
@@ -61,7 +64,7 @@ nav.nav-bar {
     }
 
     > div:nth-child(2) {
-        transition: opacity 300ms ease, visibility 300ms ease;
+        transition: opacity 150ms ease;
         background-color: black;
         display: flex;
         flex-grow: 1;
@@ -71,56 +74,47 @@ nav.nav-bar {
             @include nav-mobile;
         }
 
-    }
-
-    ul {
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        align-items: center;
-
-        @media (width <= 768px) {
-            flex-direction: column;
-        }
-
-        li {
-            a {
-                padding: 6px 8px;
-                text-transform: uppercase;
-                display: flex;
-                cursor: pointer;
-                border-radius: 5px;
-                margin-right: 10px;
-                text-align: center;
-
-                img {
-                    margin-right: 6px;
-                }
-
-                p {
-                    line-height: 17px;
-                    margin-top: 3px;
-                    font-weight: bold;
-                }
-
-                &:hover {
-                    background-color: grey;
-                }
-            }
+        ul {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            align-items: center;
 
             @media (width <= 768px) {
-                margin-bottom: 2em;
+                flex-direction: column;
+            }
+
+            li {
+                a {
+                    padding: 6px 8px;
+                    text-transform: uppercase;
+                    display: flex;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    text-align: center;
+
+                    img {
+                        margin-right: 6px;
+                    }
+
+                    p {
+                        line-height: 17px;
+                        margin-top: 3px;
+                        font-weight: bold;
+                    }
+
+                    &:hover {
+                        background-color: grey;
+                    }
+                }
+
+                @media (width <= 768px) {
+                    margin-bottom: 2em;
+                }
             }
         }
-    }
 
-    &.menu-open {
-        > div:nth-child(2) {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-            transition: opacity 300ms ease, visibility 300ms ease;
-        }
     }
 }
 

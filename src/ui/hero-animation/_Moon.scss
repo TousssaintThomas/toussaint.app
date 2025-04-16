@@ -30,7 +30,7 @@
   }
 
   @include media-down(xs) {
-    --scale: 1;
+    --scale: 1.5;
   }
 
   > div {
