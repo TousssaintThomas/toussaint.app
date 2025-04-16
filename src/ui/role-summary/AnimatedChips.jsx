@@ -2,6 +2,7 @@
 
 import { motion, useInView } from 'motion/react'
 import { useRef } from 'react'
+import Image from 'next/image'
 
 export default function FanOutCircle() {
     const chipCount = 6
@@ -13,5 +14,14 @@ export default function FanOutCircle() {
         once: true // ✅ Only animate once
     })
 
-    return <div ref={ref} className="fanOutContainer"></div>
+    return (
+        <div ref={ref} className="fanOutContainer">
+            <Image
+                src={'/css.svg'}
+                alt={'css'}
+                width={200}
+                height={200}
+            ></Image>
+        </div>
+    )
 }

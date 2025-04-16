@@ -99,7 +99,7 @@ export default function NavBar() {
                         animate="visible"
                         exit="exit"
                         variants={fadeVariants}
-                        transition={{ duration: 0.15 }}
+                        transition={{ duration: 0.1 }}
                     >
                         <ul>{navList}</ul>
                         <ul>{offsiteList}</ul>

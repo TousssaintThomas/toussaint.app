@@ -28,7 +28,7 @@ export default function RoleSummary() {
         >
             <div className={`${styles['code-anim']} flex-1 relative`}>
                 <Image
-                    src={'/MockIDE.svg'}
+                    src={'/images/MockIDE.svg'}
                     alt={'n/a'}
                     width={260}
                     height={260}
@@ -38,7 +38,7 @@ export default function RoleSummary() {
                 <div className={styles['pulsing-circuit']}>
                     <div className={styles['pulse-layer']}></div>
                     <Image
-                        src={'/CircuitBoardLanes.svg'}
+                        src={'/images/CircuitBoardLanes.svg'}
                         alt={'Circuit board lanes'}
                         width={2000}
                         height={300}

@@ -11,7 +11,7 @@ export default function WorkExp() {
             <li key={skillID} className={'inline-flex'}>
                 <a className={'md-chip mr-2 mb-2 select-none cursor-pointer'}>
                     <Image
-                        src={Skills[skillID].icon}
+                        src={`/icons/${Skills[skillID].icon}.svg`}
                         width={25}
                         height={25}
                         alt="Picture of the author"

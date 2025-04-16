@@ -1,8 +1,8 @@
 @use '../_styles/media' as *;
 
-$clouds-top: url('/CloudsTopFramed.svg');
-$clouds-bottom-background: url('/CloudsBottomBackground.svg');
-$clouds-bottom-foreground: url('/CloudsBottomForeground.svg');
+$clouds-top: url('/images/hero-animation/CloudsTopFramed.svg');
+$clouds-bottom-background: url('/images/hero-animation/CloudsBottomBackground.svg');
+$clouds-bottom-foreground: url('/images/hero-animation/CloudsBottomForeground.svg');
 $scroll-clouds: scroll-clouds 200s linear infinite;
 $clouds-bottom-padding: 8.5em;
 
@@ -80,11 +80,11 @@ $clouds-bottom-padding: 8.5em;
     animation: $scroll-clouds;
 
     @if $class == clouds-top {
-      @include responsive-cloud(3, 3.8, 3, 2.5, 1, top, 68px, 68px, 68px, 80px, 80px);
-      @include scroll-clouds(200s);
+      @include responsive-cloud(3, 3, 2.5, 2.5, 1, top, 68px, 90px, 68px, 80px, 80px);
+      @include scroll-clouds(125s);
     } @else {
       @include responsive-cloud(4, 3.8, 3, 3, 1, bottom, 1em, 2em, 7em, 7em, 6em);
-      @include scroll-clouds(125s);
+      @include scroll-clouds(300s);
     }
 
     > div {

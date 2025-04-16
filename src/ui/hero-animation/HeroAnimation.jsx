@@ -27,7 +27,7 @@ export default function HeroAnimation({ launched }) {
                 `}
                 >
                     <Image
-                        src="/CresantMoon.svg"
+                        src="/images/hero-animation/CresantMoon.svg"
                         alt="Moon"
                         width={70}
                         height={70}
@@ -47,7 +47,7 @@ export default function HeroAnimation({ launched }) {
             </div>
             <div className={`${styles['mountain-range']} z-1`}>
                 <Image
-                    src="/MountainRange.svg"
+                    src="/images/hero-animation/MountainRange.svg"
                     alt="Mountain Range"
                     width={2000}
                     height={300}
@@ -79,7 +79,7 @@ export default function HeroAnimation({ launched }) {
                 >
                     <div className={`${styles['launch-pad']}`}>
                         <Image
-                            src={'/LaunchPad.svg'}
+                            src={'/images/hero-animation/LaunchPad.svg'}
                             alt={'n/a'}
                             width={2000}
                             height={300}
@@ -93,7 +93,7 @@ export default function HeroAnimation({ launched }) {
                             `}
                         >
                             <Image
-                                src={'/SpaceShuttle.svg'}
+                                src={'/images/hero-animation/SpaceShuttle.svg'}
                                 alt={'n/a'}
                                 width={2000}
                                 height={300}
@@ -108,7 +108,7 @@ export default function HeroAnimation({ launched }) {
                                 {Array.from({ length: 5 }).map((_, i) => (
                                     <Image
                                         key={i}
-                                        src="/RocketFlame.svg"
+                                        src="/images/hero-animation/RocketFlame.svg"
                                         alt="Rocket Flame"
                                         width={100}
                                         height={100}
@@ -119,7 +119,7 @@ export default function HeroAnimation({ launched }) {
                             </div>
                         </div>
                         <Image
-                            src={'/ShuttleElevator.svg'}
+                            src={'/images/hero-animation/ShuttleElevator.svg'}
                             alt={'n/a'}
                             width={2000}
                             height={300}

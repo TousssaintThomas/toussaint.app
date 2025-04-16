@@ -2,41 +2,46 @@
 
 .moon-img {
   --scale: 0.75;
-
-  height: auto;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding-top: 6em;
-
+  --padding-top: 7em;
   --moon-img-size-base: 12rem;
   --moon-img-size: calc(var(--moon-img-size-base) * var(--scale));
 
   @include media-down(xl) {
     --scale: 0.75;
+    --padding-top: 18em;
   }
 
   @include media-down(lg) {
     --scale: 0.7;
+    --padding-top: 18em;
   }
 
   @include media-down(md) {
     --scale: 0.7;
+    --padding-top: 18em;
   }
 
   @include media-down(sm) {
     --scale: 0.75;
+    --padding-top: 7em;
   }
 
   @include media-down(xs) {
     --scale: 1.5;
+    --padding-top: 7em;
   }
 
   > div {
     display: flex;
     justify-content: flex-end;
   }
+
+  height: auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7em;
 
   @media (width >= 768px) {
     padding-top: 18em;

@@ -2,101 +2,101 @@
   {
     "name": "Angular.JS",
     "description": "A Javascript framework",
-    "icon": "/angular.svg"
+    "icon": "angular"
   },
   {
     "name": "AWS Lambda ",
     "description": "A Javascript framework",
-    "icon": "/awslambda.svg"
+    "icon": "awslambda"
   },
   {
     "name": "AWS API Gateway ",
     "description": "A Javascript framework",
-    "icon": "/amazonapigateway.svg"
+    "icon": "amazonapigateway"
   },
   {
     "name": "Amazon S3 ",
     "description": "A Javascript framework",
-    "icon": "/amazons3.svg"
+    "icon": "amazons3"
   },
   {
     "name": "AWS SQS ",
     "description": "A Javascript framework",
-    "icon": "/amazonsqs.svg"
+    "icon": "amazonsqs"
   },
   {
     "name": "CSS",
     "description": "A Javascript framework",
-    "icon": "/css.svg"
+    "icon": "css"
   },
   {
     "name": "Electron",
     "description": "A Javascript framework",
-    "icon": "/electron.svg"
+    "icon": "electron"
   },
   {
     "name": "HTML5",
     "description": "",
-    "icon": "/html5.svg"
+    "icon": "html5"
   },
   {
     "name": "JavaScript",
     "description": "A Javascript framework",
-    "icon": "/javascript.svg"
+    "icon": "javascript"
   },
   {
     "name": "MongoDB",
     "description": "A Javascript framework",
-    "icon": "/mongodb.svg"
+    "icon": "mongodb"
   },
   {
     "name": "MySQL",
     "description": "A Javascript framework",
-    "icon": "/mysql.svg"
+    "icon": "mysql"
   },
   {
     "name": "Next.js",
     "description": "A Javascript framework",
-    "icon": "/nextdotjs.svg"
+    "icon": "nextdotjs"
   },
   {
     "name": "Node.js",
     "description": "A Javascript framework",
-    "icon": "/nodedotjs.svg"
+    "icon": "nodedotjs"
   },
   {
     "name": "PostgreSQL",
     "description": "A Javascript framework",
-    "icon": "/postgresql.svg"
+    "icon": "postgresql"
   },
   {
     "name": "Python",
     "description": "A Javascript framework",
-    "icon": "/python.svg"
+    "icon": "python"
   },
   {
     "name": "React.js",
     "description": "A Javascript framework",
-    "icon": "/react.svg"
+    "icon": "react"
   },
   {
     "name": "Sass",
     "description": "A Javascript framework",
-    "icon": "/sass.svg"
+    "icon": "sass"
   },
   {
     "name": "Selenium ",
     "description": "A Javascript framework",
-    "icon": "/selenium.svg"
+    "icon": "selenium"
   },
   {
     "name": "TypeScript",
     "description": "A Javascript framework",
-    "icon": "/typescript.svg"
+    "icon": "typescript"
   },
   {
     "name": "Vue.js",
     "description": "A Javascript framework",
-    "icon": "/vuedotjs.svg"
+    "icon": "vuedotjs"
   }
 ]
