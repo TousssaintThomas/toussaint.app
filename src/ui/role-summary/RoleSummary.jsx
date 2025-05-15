@@ -22,11 +22,11 @@ export default function RoleSummary() {
                 flex 
                 flex-col 
                 md:flex-row 
-                py-16
+                pt-22
                 md:justify-center
             `}
         >
-            <div className={`${styles['code-anim']} flex-1 relative`}>
+            <div className={`${styles['code-anim']} flex-1 relative mb-10`}>
                 <Image
                     src={'/images/MockIDE.svg'}
                     alt={'n/a'}
