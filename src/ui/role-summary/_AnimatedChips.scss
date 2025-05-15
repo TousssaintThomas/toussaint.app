@@ -1,0 +1,17 @@
+.chip {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: #f9a8d4; // pink-300
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chip-icon {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
