@@ -17,10 +17,37 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 export default function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false)
 
+    const fadeVariants = {
+        hidden: {
+            opacity: 0,
+            pointerEvents: 'none'
+        },
+        visible: {
+            opacity: 1,
+            pointerEvents: 'auto'
+        },
+        exit: {
+            opacity: 0,
+            transition: { duration: 0.1 }
+        }
+    }
+
     const navItems = [
-        { name: 'Home', icon: HomeIcon, href: '#summary' },
-        { name: 'Resume', icon: EditDocumentIcon, href: '#resume' },
-        { name: 'Contact', icon: CallIcon, href: '#contact' }
+        {
+            name: 'Home',
+            icon: HomeIcon,
+            href: '#summary'
+        },
+        {
+            name: 'Resume',
+            icon: EditDocumentIcon,
+            href: '#resume'
+        },
+        {
+            name: 'Contact',
+            icon: CallIcon,
+            href: '#contact'
+        }
     ]
 
     const offSiteLinks = [
@@ -36,41 +63,34 @@ export default function NavBar() {
         }
     ]
 
-    const navList = navItems.map((item) => {
-        const Icon = item.icon
-
+    const NavList = ({ items }) => {
         return (
-            <li key={item.name}>
-                <a href={item.href} onClick={() => setMenuOpen(false)}>
-                    <Icon className={styles['nav-icon']} />
-                    <p>{item.name}</p>
-                </a>
-            </li>
+            <ul>
+                {items.map((item) => {
+                    const Icon = item.icon
+
+                    return (
+                        <li key={item.name}>
+                            <a
+                                href={item.href}
+                                onClick={() => setMenuOpen(false)}
+                            >
+                                <Icon className={styles['nav-icon']} />
+                                <p>{item.name}</p>
+                            </a>
+                        </li>
+                    )
+                })}
+            </ul>
         )
-    })
-
-    const offsiteList = offSiteLinks.map((item) => {
-        const Icon = item.icon
-
-        return (
-            <li key={item.name}>
-                <a href={item.href}>
-                    <Icon className={styles['nav-icon']} />
-                    <p>{item.name}</p>
-                </a>
-            </li>
-        )
-    })
-
-    const fadeVariants = {
-        hidden: { opacity: 0, pointerEvents: 'none' },
-        visible: { opacity: 1, pointerEvents: 'auto' },
-        exit: { opacity: 0, transition: { duration: 0.1 } }
     }
 
     return (
         <nav
-            className={`${styles['nav-bar']} ${menuOpen ? styles['menu-open'] : ''}`}
+            className={`
+                ${styles['nav-bar']} 
+                ${menuOpen ? styles['menu-open'] : ''}
+            `}
         >
             <div>
                 <button
@@ -94,15 +114,25 @@ export default function NavBar() {
             <AnimatePresence>
                 {menuOpen && (
                     <motion.div
-                        className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8"
+                        className="
+                            w-full
+                            max-w-screen-xl
+                            mx-auto
+                            px-4
+                            sm:px-6
+                            lg:px-8
+                        "
                         initial="hidden"
                         animate="visible"
                         exit="exit"
                         variants={fadeVariants}
                         transition={{ duration: 0.1 }}
                     >
-                        <ul>{navList}</ul>
-                        <ul>{offsiteList}</ul>
+                        <div className={`${styles['site-logo']}`}>
+                            <p>Logo</p>
+                        </div>
+                        <NavList items={navItems}></NavList>
+                        <NavList items={offSiteLinks}></NavList>
                     </motion.div>
                 )}
             </AnimatePresence>

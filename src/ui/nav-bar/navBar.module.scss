@@ -74,6 +74,10 @@ nav.nav-bar {
             @include nav-mobile;
         }
 
+        div.site-logo {
+            margin-bottom: 4em;
+        }
+
         ul {
             display: flex;
             flex-direction: row;
