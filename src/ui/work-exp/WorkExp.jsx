@@ -66,7 +66,7 @@ export default function WorkExp() {
     })
 
     return (
-        <section id={'resume'} className={'grid place-items-center'}>
+        <section id={'resume'} className={'grid place-items-center pt-20'}>
             <div className="w-full flex flex-col items-center text-center">
                 <h1
                     className={`${styles['section-header']} text-xl md:text-left`}
