@@ -1,13 +1,13 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import styles from './PageHeader.module.scss'
-import Image from 'next/image'
 import HeaderText from './HeaderText.json'
-import HeroAnimation from '@/ui/hero-animation/HeroAnimation'
+import HeroAnimation from '@/ui/page-header/hero-animation/HeroAnimation'
 
 export default function PageHeader() {
     const [launched, setLaunched] = useState(false)
+    const HeroSubTxtBot = useRef(null)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -25,7 +25,10 @@ export default function PageHeader() {
 
     return (
         <header className={`${styles['page-header']} flex`}>
-            <HeroAnimation launched={launched}></HeroAnimation>
+            <HeroAnimation
+                launched={launched}
+                HeroSubTxtBot={HeroSubTxtBot}
+            ></HeroAnimation>
             <div
                 className={`
                     ${styles['hero-text']} 
@@ -42,7 +45,12 @@ export default function PageHeader() {
                 `}
             >
                 <div
-                    className={`sm:max-w-xl md:max-w-8/10 lg:max-w-8/10 xl:max-w-xl`}
+                    className={`
+                        sm:max-w-xl 
+                        md:max-w-8/10 
+                        lg:max-w-8/10 
+                        xl:max-w-xl
+                    `}
                 >
                     <h1 className={`${styles['hero-text-dev-name']}`}>
                         {HeaderText.name}
@@ -50,7 +58,10 @@ export default function PageHeader() {
                     <h1 className={`${styles['dev-title']}`}>
                         {HeaderText.title}
                     </h1>
-                    <p className={`${styles['hero-sub-text']}`}>
+                    <p
+                        className={`${styles['hero-sub-text']}`}
+                        ref={HeroSubTxtBot}
+                    >
                         {HeaderText.subText}
                     </p>
                     <div className={`${styles['header-divider']}`}></div>

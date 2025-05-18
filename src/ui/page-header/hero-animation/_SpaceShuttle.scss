@@ -1,4 +1,4 @@
-@use '../_styles/media' as *;
+@use '../../_styles/media' as *;
 
 .launch-pad-container {
   --scale: 1;
@@ -13,7 +13,8 @@
   --shuttle-launch-flames: calc(var(--shuttle-launch-flames-base) * var(--scale));
   --shuttle-elevator: calc(var(--shuttle-elevator-base) * var(--scale));
   --shuttle-elevator-bot: calc(var(--shuttle-elevator-bot-base) * var(--scale));
-  --shuttle-launch-distance: calc(var(--shuttle-launch-distance-base) * var(--scale));
+  /*--shuttle-launch-distance: calc(var(--shuttle-launch-distance-base) * var(--scale));*/
+  --shuttle-launch-distance: -400px;
 
   @include media-down(xl) {
     --scale: 0.75;
