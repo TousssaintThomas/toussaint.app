@@ -39,14 +39,13 @@ export default function RoleSummary() {
                     <div className={styles['pulse-layer']}></div>
                     <Image
                         src={'/images/CircuitBoardLanes.svg'}
-                        alt={'Circuit board lanes'}
-                        width={2000}
-                        height={300}
+                        alt={'n/a'}
+                        width={260}
+                        height={260}
                         unoptimized={true}
-                        className={styles['lane-mask']}
-                    />
+                        className={`${styles['tech-lines']}`}
+                    ></Image>
                 </div>
-                <AnimatedChips></AnimatedChips>
             </div>
             <div className={`flex-1 md:px-6 lg:px-8 flex items-center`}>
                 <div className="w-full">

@@ -44,6 +44,10 @@
 .summary-section-txt {
 }
 
+.circuit-img {
+  width: 100%;
+}
+
 .circuit-wrap {
   position: relative;
 }
@@ -107,6 +111,12 @@
   position: absolute;
   z-index: 1;
   width: 20.5rem;
+}
+
+.tech-lines {
+  // position: absolute;
+  z-index: 0;
+  width: 25.5rem;
 }
 
 .fan-out-container {
