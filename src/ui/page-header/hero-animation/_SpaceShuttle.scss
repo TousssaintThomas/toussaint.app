@@ -63,6 +63,49 @@
     bottom: 0;
     z-index: 1;
 
+    .smoke-clouds {
+      width: 100%;
+      height: 10em;
+      bottom: -5px;
+      position: absolute;
+      clip-path: rect(50px 100% 92% 10%);
+      opacity: 0;
+
+      &.launched {
+        animation-name: smoke-in;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        animation-timing-function: linear;
+      }
+
+      &.landed {
+        animation-name: smoke-out;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        animation-timing-function: linear;
+      }
+
+      img {
+        bottom: -10px;
+        position: absolute;
+
+      }
+
+      img:first-child {
+        width: 70px;
+        left: 15%;
+        animation: spin 6s linear infinite reverse;
+      }
+
+      img:nth-child(2) {
+        width: 100px;
+        right: 15%;
+        animation: spin 6s linear infinite forwards;
+      }
+    }
+
     .space-shuttle {
       width: 90%;
       position: absolute;
@@ -102,7 +145,7 @@
       &:nth-child(3),
       &:nth-child(4),
       &:nth-child(5) {
-        transform: translateX(-50%);
+        // transform: translateX(-50%);
         top: 5px;
       }
 
@@ -115,17 +158,17 @@
       }
 
       &:nth-child(3) {
-        left: 50%;
-        z-index: 2;
-      }
-
-      &:nth-child(4) {
-        left: 60%;
+        left: 25%;
         z-index: 1;
       }
 
+      &:nth-child(4) {
+        left: 36.5%;
+        z-index: 2;
+      }
+
       &:nth-child(5) {
-        left: 40%;
+        left: 48%;
         z-index: 1;
       }
     }
@@ -140,14 +183,50 @@
       transition: opacity 0.4s ease;
 
       &.show-flames {
-        opacity: 1;
         pointer-events: auto;
+        animation-name: flame-switch;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+
 
         .rocket-flame {
-          animation: flame-flicker ease-in-out 0.3s infinite;
+          animation:
+          flame-flicker 0.3s ease-in-out infinite 0.3s,
+            flame-grow 1s ease-out forwards;
+          transform-origin: top center;
+
+        }
+      }
+
+      &.hide-flames {
+        pointer-events: auto;
+        animation-name: flame-switch;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-direction: reverse;
+        animation-timing-function: linear;
+
+
+        .rocket-flame {
+          animation:
+                  flame-flicker 0.3s ease-in-out infinite 0.3s,
+            flame-shrink 1s ease-out forwards;
+          transform-origin: top center;
         }
       }
     }
+  }
+}
+
+@keyframes flame-switch {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -157,4 +236,55 @@
   50%  { opacity: 1;  }
   75%  { opacity: 0.6; }
   100% { opacity: 0.9;  }
+}
+
+@keyframes flame-grow {
+  0% {
+    transform: scale(0,0) ;
+  }
+  40% {
+    transform: scale(1,1) ;
+  }
+}
+
+@keyframes flame-shrink {
+  0% {
+    transform: scale(1,1);
+  }
+  90% {
+    transform: scale(0,0);
+  }
+  100% {
+    transform: scale(0,0);
+  }
+}
+
+@keyframes spin {
+  0% {
+
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes smoke-in {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes smoke-out {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
 }

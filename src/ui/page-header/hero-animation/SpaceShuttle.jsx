@@ -17,7 +17,7 @@ export default function SpaceShuttle({ launched, HeroSubTxtBot }) {
 
         console.log('DISTANCE', distance)
         // Clamp or subtract buffer if needed
-        const safeDistance = Math.max(distance - 20, 0)
+        const safeDistance = Math.max(distance, 0)
 
         SpaceShuttleBounds.current.style.setProperty(
             '--shuttle-launch-distance',
@@ -30,7 +30,7 @@ export default function SpaceShuttle({ launched, HeroSubTxtBot }) {
             <div
                 className={`
                     ${styles['flame-container']} 
-                    ${launched ? styles['show-flames'] : ''}
+                    ${launched ? styles['show-flames'] : styles['hide-flames']}
                 `}
             >
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -95,6 +95,27 @@ export default function SpaceShuttle({ launched, HeroSubTxtBot }) {
                             unoptimized={true}
                         />
                         <ShuttleFlames />
+                    </div>
+                    <div
+                        className={`
+                        ${styles['smoke-clouds']}
+                        ${launched ? styles['launched'] : styles['landed']}
+                    `}
+                    >
+                        <Image
+                            src={imgPath('SmallSmokeCloud')}
+                            alt={'n/a'}
+                            width={2000}
+                            height={300}
+                            unoptimized={true}
+                        />
+                        <Image
+                            src={imgPath('BigSmokeCloud')}
+                            alt={'n/a'}
+                            width={2000}
+                            height={300}
+                            unoptimized={true}
+                        />
                     </div>
                     <Image
                         src={imgPath('ShuttleElevator')}
