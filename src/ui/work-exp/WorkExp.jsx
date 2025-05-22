@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from './WorkExp.module.scss'
 import WorkExpData from './WorkExpData.json'
 import Skills from './Skills.json'
-import AnimatedAvatar from '@/ui/animated-avatar/AnimatedAvatar'
+import AnimatedAvatar from '@/ui/work-exp/animated-avatar/AnimatedAvatar'
 
 export default function WorkExp() {
     const roleList = WorkExpData.map((role) => {

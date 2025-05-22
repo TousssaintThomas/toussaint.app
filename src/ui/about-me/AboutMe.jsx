@@ -1,12 +1,13 @@
 'use client'
 
-import styles from '@/ui/role-summary/RoleSummary.module.scss'
+import styles from '@/ui/about-me/AboutMe.module.scss'
 import Image from 'next/image'
 import { motion } from 'motion/react'
-import AnimatedChips from '@/ui/role-summary/AnimatedChips'
+import AnimatedChips from '@/ui/about-me/AnimatedChips'
 import AboutMeTxt from './about-me.json'
+import IdeAnimation from './IdeAnimation'
 
-export default function RoleSummary() {
+export default function AboutMe() {
     const box = {
         width: 100,
         height: 100,
@@ -26,27 +27,7 @@ export default function RoleSummary() {
                 md:justify-center
             `}
         >
-            <div className={`${styles['code-anim']} flex-1 relative mb-10`}>
-                <Image
-                    src={'/images/MockIDE.svg'}
-                    alt={'n/a'}
-                    width={260}
-                    height={260}
-                    unoptimized={true}
-                    className={`${styles['mock-ide']}`}
-                />
-                <div className={styles['pulsing-circuit']}>
-                    <div className={styles['pulse-layer']}></div>
-                    <Image
-                        src={'/images/CircuitBoardLanes.svg'}
-                        alt={'n/a'}
-                        width={260}
-                        height={260}
-                        unoptimized={true}
-                        className={`${styles['tech-lines']}`}
-                    ></Image>
-                </div>
-            </div>
+            <IdeAnimation></IdeAnimation>
             <div className={`flex-1 md:px-6 lg:px-8 flex items-center`}>
                 <div className="w-full">
                     <div
