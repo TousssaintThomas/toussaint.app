@@ -1,0 +1,290 @@
+@use '../../../_styles/media' as *;
+
+.launch-pad-container {
+  --scale: 1;
+  --shuttle-launch-base: 400px;
+  --shuttle-launch-flames-spread-base: 265px;
+  --shuttle-launch-flames-base: 75px;
+  --shuttle-elevator-base: 156px;
+  --shuttle-elevator-bot-base: -10px;
+  --shuttle-launch-distance-base: -400px;
+  --shuttle-launch: calc(var(--shuttle-launch-base) * var(--scale));
+  --shuttle-launch-flames-spread: calc(var(--shuttle-launch-flames-spread-base) * var(--scale));
+  --shuttle-launch-flames: calc(var(--shuttle-launch-flames-base) * var(--scale));
+  --shuttle-elevator: calc(var(--shuttle-elevator-base) * var(--scale));
+  --shuttle-elevator-bot: calc(var(--shuttle-elevator-bot-base) * var(--scale));
+  /*--shuttle-launch-distance: calc(var(--shuttle-launch-distance-base) * var(--scale));*/
+  --shuttle-launch-distance: -400px;
+
+  @include media-down(xl) {
+    --scale: 0.75;
+  }
+
+  @include media-down(lg) {
+    --scale: 0.7;
+  }
+
+  @include media-down(md) {
+    --scale: 0.7;
+  }
+
+  @include media-down(sm) {
+    --scale: 0.5;
+  }
+
+  @include media-down(xs) {
+    --scale: 0.4;
+  }
+
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 4px;
+
+  > div {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .launch-pad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: var(--shuttle-launch);
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+
+    .smoke-clouds {
+      width: 100%;
+      height: 10em;
+      bottom: -5px;
+      position: absolute;
+      clip-path: rect(50px 100% 89% 14%);
+      opacity: 0;
+
+      &.launched {
+        animation-name: smoke-in;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        animation-timing-function: linear;
+      }
+
+      &.landed {
+        animation-name: smoke-out;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        animation-timing-function: linear;
+      }
+
+      img {
+        bottom: -10px;
+        position: absolute;
+
+      }
+
+      img:first-child {
+        width: 70px;
+        left: 15%;
+        animation: spin 6s linear infinite reverse;
+      }
+
+      img:nth-child(2) {
+        width: 100px;
+        right: 15%;
+        animation: spin 6s linear infinite forwards;
+      }
+    }
+
+    .space-shuttle {
+      width: 90%;
+      position: absolute;
+      bottom: 5px;
+      will-change: transform;
+      transition: transform 1s ease-out;
+
+      &.launched {
+        transform: translateY(var(--shuttle-launch-distance));
+      }
+    }
+
+    .shuttle-launch-pad {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .shuttle-elevator {
+      width: var(--shuttle-elevator);
+      position: absolute;
+      bottom: var(--shuttle-elevator-bot);
+      right: 0;
+    }
+
+    .rocket-flame {
+      width: var(--shuttle-launch-flames);
+      height: var(--shuttle-launch-flames);
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        position: absolute;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        // transform: translateX(-50%);
+        top: 5px;
+      }
+
+      &:nth-child(1) {
+        left: 0;
+      }
+
+      &:nth-child(2) {
+        right: 0;
+      }
+
+      &:nth-child(3) {
+        left: 25%;
+        z-index: 1;
+      }
+
+      &:nth-child(4) {
+        left: 36.5%;
+        z-index: 2;
+      }
+
+      &:nth-child(5) {
+        left: 48%;
+        z-index: 1;
+      }
+    }
+
+    .flame-container {
+      display: flex;
+      width: var(--shuttle-launch-flames-spread);
+      position: relative;
+      margin: 0 auto;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+
+      &.show-flames {
+        pointer-events: auto;
+        animation-name: flame-switch;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+
+
+        .rocket-flame {
+          animation:
+          flame-flicker 0.3s ease-in-out infinite 0.3s,
+            flame-grow 1s ease-out forwards;
+          transform-origin: top center;
+
+        }
+      }
+
+      &.hide-flames {
+        pointer-events: auto;
+        animation-name: flame-switch;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-direction: reverse;
+        animation-timing-function: linear;
+
+
+        .rocket-flame {
+          animation:
+                  flame-flicker 0.3s ease-in-out infinite 0.3s,
+            flame-shrink 1s ease-out forwards;
+          transform-origin: top center;
+        }
+      }
+    }
+  }
+}
+
+@keyframes flame-switch {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flame-flicker {
+  0%   { opacity: 0.8;  }
+  25%  { opacity: 0.4;  }
+  50%  { opacity: 1;  }
+  75%  { opacity: 0.6; }
+  100% { opacity: 0.9;  }
+}
+
+@keyframes flame-grow {
+  0% {
+    transform: scale(0,0) ;
+  }
+  40% {
+    transform: scale(1,1) ;
+  }
+}
+
+@keyframes flame-shrink {
+  0% {
+    transform: scale(1,1);
+  }
+  90% {
+    transform: scale(0,0);
+  }
+  100% {
+    transform: scale(0,0);
+  }
+}
+
+@keyframes spin {
+  0% {
+
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes smoke-in {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes smoke-out {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+}

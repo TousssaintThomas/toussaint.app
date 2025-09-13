@@ -1,0 +1,42 @@
+.stova-se-animation {
+  position: relative;
+  z-index: 2;
+  background-color: red;
+
+  .anim-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .code-anim {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    opacity: 0; /* start hidden */
+  }
+
+  /* Base offsets for your 3 cards */
+  .code-anim:nth-child(1) { transform: translateX(-60px); z-index: 3; }
+  .code-anim:nth-child(2) { z-index: 2; }
+  .code-anim:nth-child(3) { transform: translateX(60px);  z-index: 1; }
+
+  /* When wrapper gets active, trigger staggered animations */
+  &.is-active {
+    .code-anim {
+      animation: slideIn 600ms ease forwards;
+    }
+
+    .code-anim:nth-child(1) { animation-delay: 0ms; }
+    .code-anim:nth-child(2) { animation-delay: 120ms; }
+    .code-anim:nth-child(3) { animation-delay: 240ms; }
+  }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(200px); opacity: 0.6; }
+  to   { transform: translateY(0);     opacity: 1; }
+}

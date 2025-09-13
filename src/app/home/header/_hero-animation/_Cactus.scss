@@ -1,0 +1,37 @@
+@use '../../../_styles/media' as *;
+
+.cactus-group {
+  --scale: 0.75;
+  --padding-top: 7em;
+  --moon-img-size-base: 12rem;
+  --moon-img-size: calc(var(--moon-img-size-base) * var(--scale));
+
+  @include media-down(xl) {
+    --scale: 0.75;
+  }
+
+  @include media-down(lg) {
+    --scale: 0.7;
+  }
+
+  @include media-down(md) {
+    --scale: 0.7;
+  }
+
+  @include media-down(sm) {
+    --scale: 0.75;
+  }
+
+  @include media-down(xs) {
+    --scale: 1.5;
+  }
+
+  > img {
+    width: 70px;
+  }
+
+  bottom: 4px;
+  position: absolute;
+  width: 100%;
+  padding-left: 3.25em;
+}

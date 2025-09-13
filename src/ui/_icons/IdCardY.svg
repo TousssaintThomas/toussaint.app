@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 469">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d9e021;
+      }
+
+      .cls-2 {
+        fill: #ff0;
+      }
+    </style>
+  </defs>
+  <g id="card_bg_rgb" data-name="card bg rgb">
+    <g id="Yellow">
+      <rect class="cls-2" width="296" height="464" rx="17.45" ry="17.45"/>
+      <path class="cls-1" d="M293.96,9.26c1.3,2.44,2.04,5.22,2.04,8.18v429.11c0,9.64-7.81,17.45-17.45,17.45H17.45c-4.36,0-8.35-1.61-11.41-4.26,2.93,5.51,8.73,9.26,15.41,9.26h261.11c9.64,0,17.45-7.81,17.45-17.45V22.45c0-5.27-2.35-9.98-6.04-13.18Z"/>
+    </g>
+  </g>
+</svg>

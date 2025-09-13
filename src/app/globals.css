@@ -1,5 +1,61 @@
 @import "tailwindcss";
 
+/* ========= Root (default / light) ========= */
+:root {
+  /* Core palette */
+  --color-bg:           #0b0c10;
+  --color-surface:      #121316;
+  --color-primary:      #7c5cff;
+  --color-primary-600:  #694bdb;
+  --color-secondary:    #00d1b2;
+  --color-accent:       #ffae00;
+
+  /* Text */
+  --text-high:   #f5f7fa;
+  --text-med:    #cfd6df;
+  --text-low:    #9aa5b1;
+
+  /* Borders / dividers */
+  --line:        #2a2f36;
+
+  /* States */
+  --success:     #2ecc71;
+  --warning:     #f4bf50;
+  --danger:      #ff5d5d;
+
+  /* Shadows (optional) */
+  --shadow-appbar:
+          0px 2px 4px -1px rgba(0,0,0,.20),
+          0px 4px 5px 0px  rgba(0,0,0,.14),
+          0px 1px 10px 0px rgba(0,0,0,.12);
+
+  /* Typography scale (optional) */
+  --font-sans:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Inter,
+          "Helvetica Neue",
+          Arial,
+          "Noto Sans",
+          "Liberation Sans",
+          sans-serif;
+  --font-mono:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          "Liberation Mono",
+          "Courier New",
+          monospace;
+  --fs-1: clamp(2rem, 2.5vw, 3rem);
+  --fs-2: 1.25rem;
+  --fs-3: 1rem;
+}
+
 :root {
   --background: black;
   --foreground: white;
@@ -7,7 +63,12 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
+  --color-background:   #0b0c10;
+  --color-surface:      #121316;
+  --color-primary:      #7c5cff;
+  --color-primary-600:  #694bdb;
+  --color-secondary:    #00d1b2;
+  --color-accent:       #ffae00;
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -31,7 +92,7 @@ html {
 }
 
 body {
-  background: var(--background);
+  /*background-color: var(--color-bg);*/
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
@@ -49,8 +110,8 @@ footer {
 }
 
 .section-header {
-  font-size: 32px;
-  margin-bottom: 0.25rem;
+  font-size: 50px;
+  margin-bottom: 1rem;
 }
 
 .md-chip {
@@ -63,4 +124,16 @@ footer {
     background: #ccc;
     cursor: pointer;
   }
+}
+
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+hr {
+  flex: 1;
+  border: none;
+  height: 4px;
+  background-color: white;
+  border-radius: 3px;
 }

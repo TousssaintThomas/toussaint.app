@@ -1,0 +1,22 @@
+.role-list div div ul:first-child {
+    list-style-type: disc;
+    padding: 1em 0 1em 1em;
+}
+
+.role-description {
+    ul {
+        li {
+            padding-bottom: 0.75em;
+        }
+    }
+}
+
+.section-header {
+    font-size: 32px;
+}
+
+.section-divider {
+    height: 10px;
+    width: 100px;
+    background-color: white;
+}

@@ -1,14 +1,16 @@
 'use client'
 
-import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
+
 import styles from './navBar.module.scss'
-import { motion, useInView, AnimatePresence } from 'motion/react'
+import LogoAnimation from './LogoAnimation'
+import { fadeVariants } from '@/utils/motionVariants'
 
 // Icons
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
-import HomeIcon from '@mui/icons-material/Home'
+import AccountBoxIcon from '@mui/icons-material/AccountBox'
 import EditDocumentIcon from '@mui/icons-material/EditDocument'
 import CallIcon from '@mui/icons-material/Call'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
@@ -17,25 +19,14 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 export default function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false)
 
-    const fadeVariants = {
-        hidden: {
-            opacity: 0,
-            pointerEvents: 'none'
-        },
-        visible: {
-            opacity: 1,
-            pointerEvents: 'auto'
-        },
-        exit: {
-            opacity: 0,
-            transition: { duration: 0.1 }
-        }
-    }
+    // Note: The navigation links are two separate list because they are
+    // rendered as two separate lists depending on the screen size.
 
-    const navItems = [
+    // Internal page links
+    const navLinks = [
         {
-            name: 'Home',
-            icon: HomeIcon,
+            name: 'About Me',
+            icon: AccountBoxIcon,
             href: '#summary'
         },
         {
@@ -50,33 +41,62 @@ export default function NavBar() {
         }
     ]
 
+    // Offsite profile links
     const offSiteLinks = [
         {
             name: 'Github',
             icon: GitHubIcon,
-            href: 'https://github.com/TousssaintThomas'
+            href: process.env.NEXT_PUBLIC_GITHUB
         },
         {
             name: 'LinkedIn',
             icon: LinkedInIcon,
-            href: 'https://www.linkedin.com/in/toussaint-thomas-aa725196/'
+            href: process.env.NEXT_PUBLIC_LINKEDIN
         }
     ]
 
-    const NavList = ({ items }) => {
+    const NavList = ({ links }) => {
         return (
-            <ul>
-                {items.map((item) => {
-                    const Icon = item.icon
+            <ul
+                className={`
+                    flex 
+                    flex-col 
+                    md:flex-row 
+                    text-center 
+                    items-center
+                `}
+            >
+                {links.map((link) => {
+                    const Icon = link.icon
 
                     return (
-                        <li key={item.name}>
+                        <li key={link.name}>
                             <a
-                                href={item.href}
+                                href={link.href}
                                 onClick={() => setMenuOpen(false)}
+                                className={`
+                                    flex
+                                    uppercase
+                                    cursor-pointer
+                                    rounded-md
+                                    mr-4
+                                    text-center
+                                    px-2
+                                    py-2
+                                    mb-8
+                                    md:mb-0
+                                `}
                             >
-                                <Icon className={styles['nav-icon']} />
-                                <p>{item.name}</p>
+                                <Icon className={`mt-[-2px] mr-3`} />
+                                <p
+                                    className={`
+                                        leading-[16px]
+                                        mt-[3px]
+                                        font-bold
+                                    `}
+                                >
+                                    {link.name}
+                                </p>
                             </a>
                         </li>
                     )
@@ -85,57 +105,96 @@ export default function NavBar() {
         )
     }
 
+    const MenuButton = () => {
+        return (
+            <button
+                className={`
+                    ${styles['icon-toggle']} 
+                    w-[68px] 
+                    h-[68px]
+                    relative
+                    flex
+                    justify-center
+                    items-center
+                    md:hidden
+                `}
+                onClick={() => setMenuOpen(!menuOpen)}
+            >
+                <MenuIcon
+                    fontSize="large"
+                    className={`
+                        ${menuOpen ? `invisible` : `visible`}
+                        absolute
+                    `}
+                />
+                <CloseIcon
+                    fontSize="large"
+                    className={`
+                        ${menuOpen ? `visible` : `invisible`}
+                        absolute
+                    `}
+                />
+            </button>
+        )
+    }
+
     return (
         <nav
             className={`
+                flex
+                fixed
+                w-screen
+                min-h-[64px]
+                items-center
+                top-0
+                left-0
+                z-10
+                bg-surface
                 ${styles['nav-bar']} 
-                ${menuOpen ? styles['menu-open'] : ''}
             `}
         >
-            <div>
-                <button
-                    className={`px-6`}
-                    onClick={() => setMenuOpen(!menuOpen)}
-                >
-                    <div className={styles['icon-toggle']}>
-                        <MenuIcon
-                            className={
-                                menuOpen ? styles.hidden : styles.visible
-                            }
-                        />
-                        <CloseIcon
-                            className={
-                                menuOpen ? styles.visible : styles.hidden
-                            }
-                        />
-                    </div>
-                </button>
-            </div>
+            <MenuButton />
             <AnimatePresence>
                 {menuOpen && (
                     <motion.div
                         className="
+                            flex
+                            flex-col
+                            justify-center
+                            h-[calc(100vh-64px)]
+                            absolute
+                            left-0
                             w-full
-                            max-w-screen-xl
-                            mx-auto
-                            px-4
-                            sm:px-6
-                            lg:px-8
+                            top-[64px]
+                            bg-surface
                         "
-                        initial="hidden"
                         animate="visible"
                         exit="exit"
                         variants={fadeVariants}
                         transition={{ duration: 0.1 }}
                     >
-                        <div className={`${styles['site-logo']}`}>
-                            <p>Logo</p>
-                        </div>
-                        <NavList items={navItems}></NavList>
-                        <NavList items={offSiteLinks}></NavList>
+                        <LogoAnimation />
+                        <NavList links={navLinks}></NavList>
+                        <NavList links={offSiteLinks}></NavList>
                     </motion.div>
                 )}
             </AnimatePresence>
+            <div
+                className={`
+                    flex
+                    flex-row
+                    grow
+                    hidden
+                    md:flex
+                    w-full max-w-screen-xl mx-auto
+                `}
+            >
+                <NavList links={navLinks}></NavList>
+                <div className="md:ml-auto">
+                    {/* or md:ms-auto for RTL-aware */}
+                    <NavList links={offSiteLinks} />
+                </div>
+            </div>
         </nav>
     )
 }
